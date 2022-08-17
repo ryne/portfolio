@@ -12,22 +12,22 @@ const App = () => {
       y: '-200px',
       delay: 0.5,
       duration: 1.5,
-      ease: 'power4',
+      ease: 'power3',
     });
     gsap.to(refShadow.current, {
       y: '200px',
       delay: 0.5,
       duration: 1.5,
-      ease: 'power4',
+      ease: 'power3',
       filter: 'blur(24px)',
       opacity: 0,
       width: '100px',
-      height: '8px',
+      height: '12px',
     });
     gsap.to(refText.current, {
       delay: 0.5,
       duration: 2.5,
-      ease: 'power2',
+      ease: 'power1',
       opacity: 1,
     });
   });
