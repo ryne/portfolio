@@ -19,14 +19,14 @@ const App = () => {
       delay: 0.5,
       duration: 1.5,
       ease: 'power3',
-      filter: 'blur(24px)',
+      filter: 'blur(12px)',
       opacity: 0,
       width: '100px',
-      height: '12px',
+      height: '8px',
     });
     gsap.to(refText.current, {
       delay: 0.5,
-      duration: 2.5,
+      duration: 3,
       ease: 'power1',
       opacity: 1,
     });
