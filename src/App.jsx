@@ -11,22 +11,20 @@ const App = () => {
     gsap.to(refLight.current, {
       y: '-200px',
       delay: 0.5,
-      duration: 1.5,
+      duration: 2,
       ease: 'power3',
     });
     gsap.to(refShadow.current, {
       y: '200px',
       delay: 0.5,
-      duration: 1.5,
+      duration: 2,
+      transform: 'scale(1.5,1)',
+      opacity: '0',
       ease: 'power3',
-      filter: 'blur(12px)',
-      opacity: 0,
-      width: '100px',
-      height: '8px',
     });
     gsap.to(refText.current, {
-      delay: 0.5,
-      duration: 3,
+      delay: 0.6,
+      duration: 2,
       ease: 'power1',
       opacity: 1,
     });
