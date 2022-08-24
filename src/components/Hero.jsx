@@ -32,7 +32,7 @@ function Hero({ toggleTheme }) {
 
   return (
     <div id="Hero">
-      <div className="flex h-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-all">
+      <div className="flex h-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-opacity transition-colors">
         <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
           <div className="absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
           <img
@@ -45,7 +45,7 @@ function Hero({ toggleTheme }) {
         <div className="opacity-0 text-center" ref={refText}>
           <h1 className="-mt-1 text-4xl md:text-5xl font-light italic">
             Ryne
-            <span className="px-4 opacity-10 dark:opacity-20">/</span>
+            <span className="px-2 md:px-3 opacity-10 dark:opacity-20">/</span>
             Not Ryan
           </h1>
           <p className="mt-2 md:mt-3 text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-50">
@@ -53,7 +53,7 @@ function Hero({ toggleTheme }) {
           </p>
         </div>
         <div
-          className="absolute h-0.5 w-10 top-50 mt-12 md:mt-20 bg-black blur scale-y-50 dark:bg-white"
+          className="absolute h-0.5 w-10 top-50 mt-20 bg-black blur scale-y-50 dark:bg-white"
           ref={refShadow}
         ></div>
       </div>
