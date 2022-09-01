@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import light from '../assets/light.png';
-import { BsFillFileRichtextFill } from 'react-icons/bs';
+import { BsFillFileRichtextFill, BsChevronDown } from 'react-icons/bs';
 
 function Hero({ toggleTheme }) {
   const refLight = useRef();
@@ -31,9 +31,10 @@ function Hero({ toggleTheme }) {
       opacity: 1,
     });
     gsap.to(refPortfolio.current, {
-      y: -120,
-      delay: 2.2,
+      y: -60,
+      delay: 2,
       duration: 1,
+      opacity: 1,
       ease: 'power4',
     });
   });
@@ -63,7 +64,7 @@ function Hero({ toggleTheme }) {
         className="absolute h-0.5 w-10 top-50 mt-20 bg-black blur scale-y-50 dark:bg-white"
         ref={refShadow}
       ></div>
-      <div className="absolute -bottom-12 z-10" ref={refPortfolio}>
+      <div className="absolute opacity-0 bottom-0 z-10" ref={refPortfolio}>
         <button
           className="flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
           onClick={() => toggleTheme()}
@@ -77,6 +78,7 @@ function Hero({ toggleTheme }) {
           <span className="absolute top-0 z-10">
             <BsFillFileRichtextFill className="text-3xl -rotate-6 mt-1 -ml-7 opacity-20" />
           </span>
+          <BsChevronDown className="absolute text-lg -bottom-9 animate-bounce pointer-events-none opacity-20" />
         </button>
       </div>
     </section>
