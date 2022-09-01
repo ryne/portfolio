@@ -31,7 +31,7 @@ function Hero({ toggleTheme }) {
       opacity: 1,
     });
     gsap.to(refPortfolio.current, {
-      y: -60,
+      y: -30,
       delay: 2,
       duration: 1,
       opacity: 1,
@@ -64,7 +64,7 @@ function Hero({ toggleTheme }) {
         className="absolute h-0.5 w-10 top-50 mt-20 bg-black blur scale-y-50 dark:bg-white"
         ref={refShadow}
       ></div>
-      <div className="absolute opacity-0 bottom-0 z-10" ref={refPortfolio}>
+      <div className="absolute opacity-0 bottom-9 z-10" ref={refPortfolio}>
         <button
           className="flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
           onClick={() => toggleTheme()}
