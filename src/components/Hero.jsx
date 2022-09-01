@@ -1,38 +1,38 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import light from '../assets/light.png';
-import computer from '../assets/omori_computer.gif';
+import { BsFillFileRichtextFill } from 'react-icons/bs';
 
 function Hero({ toggleTheme }) {
   const refLight = useRef();
   const refShadow = useRef();
   const refText = useRef();
-  const refComputer = useRef();
+  const refPortfolio = useRef();
 
   useEffect(() => {
     gsap.to(refLight.current, {
       y: -112,
       delay: 0.5,
-      duration: 2,
+      duration: 1.5,
       ease: 'power4',
     });
     gsap.to(refShadow.current, {
       y: 112,
       delay: 0.5,
-      duration: 2,
+      duration: 1.5,
       transform: 'scale(3,1.5)',
       opacity: 0.2,
       ease: 'power4',
     });
     gsap.to(refText.current, {
       delay: 0.7,
-      duration: 2,
+      duration: 1.5,
       ease: 'power1',
       opacity: 1,
     });
-    gsap.to(refComputer.current, {
+    gsap.to(refPortfolio.current, {
       y: -120,
-      delay: 2,
+      delay: 2.2,
       duration: 1,
       ease: 'power4',
     });
@@ -42,12 +42,12 @@ function Hero({ toggleTheme }) {
     <section className="flex h-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-opacity transition-colors overflow-hidden">
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
         <div className="absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
-        <img
-          src={light}
-          alt="Theme Toggle"
+        <button
           className="cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:invert"
           onClick={() => toggleTheme()}
-        />
+        >
+          <img src={light} alt="Theme Toggle" />
+        </button>
       </div>
       <div className="opacity-0 text-center" ref={refText}>
         <h1 className="-mt-1 text-4xl md:text-5xl font-light italic">
@@ -63,16 +63,21 @@ function Hero({ toggleTheme }) {
         className="absolute h-0.5 w-10 top-50 mt-20 bg-black blur scale-y-50 dark:bg-white"
         ref={refShadow}
       ></div>
-      <div
-        className="absolute w-10 -bottom-12 md:-bottom-16 z-10"
-        ref={refComputer}
-      >
-        <img
-          src={computer}
-          alt="Portfolio Start"
-          className="rendering-pixelated cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:invert"
+      <div className="absolute -bottom-12 z-10" ref={refPortfolio}>
+        <button
+          className="flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
           onClick={() => toggleTheme()}
-        />
+        >
+          <span className="absolute top-0 z-50 after:content['test'] after:absolute after:top-0.5 after:left-1.5 after:w-[24px] after:h-[32px] after:bg-white after:z-[-1] dark:after:bg-black">
+            <BsFillFileRichtextFill />
+          </span>
+          <span className="absolute top-0 z-10">
+            <BsFillFileRichtextFill className="text-3xl rotate-6 mt-1 ml-7 opacity-20" />
+          </span>
+          <span className="absolute top-0 z-10">
+            <BsFillFileRichtextFill className="text-3xl -rotate-6 mt-1 -ml-7 opacity-20" />
+          </span>
+        </button>
       </div>
     </section>
   );
