@@ -66,19 +66,19 @@ function Hero({ toggleTheme }) {
       ></div>
       <div className="absolute opacity-0 bottom-9 z-10" ref={refPortfolio}>
         <button
-          className="flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+          className="group flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
           onClick={() => toggleTheme()}
         >
           <span className="absolute top-0 z-50 after:content['test'] after:absolute after:top-0.5 after:left-1.5 after:w-[24px] after:h-[32px] after:bg-white after:z-[-1] dark:after:bg-black">
-            <BsFillFileRichtextFill />
+            <BsFillFileRichtextFill className="group-hover:scale-105 transition-all" />
           </span>
           <span className="absolute top-0 z-10">
-            <BsFillFileRichtextFill className="text-3xl rotate-6 mt-1 ml-7 opacity-20" />
+            <BsFillFileRichtextFill className="group-hover:ml-8 group-hover:rotate-12 text-3xl rotate-6 mt-1 ml-6 opacity-20 transition-all" />
           </span>
           <span className="absolute top-0 z-10">
-            <BsFillFileRichtextFill className="text-3xl -rotate-6 mt-1 -ml-7 opacity-20" />
+            <BsFillFileRichtextFill className="group-hover:-ml-8 text-3xl group-hover:-rotate-12 -rotate-6 mt-1 -ml-6 opacity-20 transition-all" />
           </span>
-          <BsChevronDown className="absolute text-lg -bottom-9 animate-bounce pointer-events-none opacity-20" />
+          <BsChevronDown className="group-hover:opacity-100 absolute text-lg -bottom-9 animate-bounce pointer-events-none opacity-20 transition-all" />
         </button>
       </div>
     </section>
