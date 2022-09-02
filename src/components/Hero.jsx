@@ -35,6 +35,7 @@ function Hero({ toggleTheme }) {
       delay: 2,
       duration: 1,
       opacity: 1,
+      pointerEvents: 'all',
       ease: 'power4',
     });
   });
@@ -64,7 +65,10 @@ function Hero({ toggleTheme }) {
         className="absolute h-0.5 w-10 top-50 mt-20 bg-black blur scale-y-50 dark:bg-white"
         ref={refShadow}
       ></div>
-      <div className="absolute opacity-0 bottom-9 z-10" ref={refPortfolio}>
+      <div
+        className="absolute pointer-events-none opacity-0 bottom-9 z-10"
+        ref={refPortfolio}
+      >
         <button
           className="group flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
           onClick={() => toggleTheme()}
