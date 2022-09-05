@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import light from '../assets/light.png';
 import { BsFillFileRichtextFill, BsChevronDown } from 'react-icons/bs';
 
-function Hero({ toggleTheme }) {
+function Hero({ toggleTheme, togglePortfolio }) {
   const refLight = useRef();
   const refShadow = useRef();
   const refText = useRef();
@@ -41,7 +41,7 @@ function Hero({ toggleTheme }) {
   });
 
   return (
-    <section className="flex h-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-opacity transition-colors overflow-hidden">
+    <section className="flex h-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-opacity transition-colors">
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
         <div className="absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
         <button
@@ -71,7 +71,7 @@ function Hero({ toggleTheme }) {
       >
         <button
           className="group flex justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-          onClick={() => toggleTheme()}
+          onClick={() => togglePortfolio()}
         >
           <span className="absolute top-0 z-50 after:content['test'] after:absolute after:top-0.5 after:left-1.5 after:w-[24px] after:h-[32px] after:bg-white after:z-[-1] dark:after:bg-black">
             <BsFillFileRichtextFill className="group-hover:scale-105 transition-all" />
