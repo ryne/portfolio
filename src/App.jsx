@@ -12,8 +12,10 @@ const App = () => {
         : false
       : window.matchMedia('(prefers-color-scheme: dark)').matches;
   };
+
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const [showPortfolio, setShowPortfolio] = useState(false);
+
   const toggleTheme = () => {
     localStorage.setItem('darkTheme', !isDarkTheme);
     setIsDarkTheme(!isDarkTheme);
@@ -24,11 +26,15 @@ const App = () => {
 
   return (
     <div id="app" className={clsx({ dark: isDarkTheme })}>
-      <Hero toggleTheme={toggleTheme} togglePortfolio={togglePortfolio} />
+      <Hero
+        toggleTheme={toggleTheme}
+        togglePortfolio={togglePortfolio}
+        showPortfolio={showPortfolio}
+      />
       <Portfolio
         toggleTheme={toggleTheme}
-        showPortfolio={showPortfolio}
         togglePortfolio={togglePortfolio}
+        showPortfolio={showPortfolio}
       />
     </div>
   );

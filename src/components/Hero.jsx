@@ -2,8 +2,9 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import light from '../assets/light.png';
 import { BsFillFileRichtextFill, BsChevronDown } from 'react-icons/bs';
+import clsx from 'clsx';
 
-function Hero({ toggleTheme, togglePortfolio }) {
+function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refLight = useRef();
   const refShadow = useRef();
   const refText = useRef();
@@ -82,7 +83,12 @@ function Hero({ toggleTheme, togglePortfolio }) {
           <span className="absolute top-0 z-10">
             <BsFillFileRichtextFill className="group-hover:-ml-8 text-3xl group-hover:-rotate-12 -rotate-6 mt-1 -ml-6 opacity-20 transition-all" />
           </span>
-          <BsChevronDown className="group-hover:opacity-100 absolute text-lg -bottom-9 animate-bounce pointer-events-none opacity-20 transition-all" />
+          <BsChevronDown
+            className={clsx(
+              'group-hover:opacity-100 absolute text-lg -bottom-9 pointer-events-none opacity-20 transition-all',
+              { 'animate-bounce': !showPortfolio }
+            )}
+          />
         </button>
       </div>
     </section>
