@@ -25,7 +25,12 @@ const App = () => {
   };
 
   return (
-    <div id="app" className={clsx({ dark: isDarkTheme })}>
+    <div
+      id="app"
+      className={clsx('bg-white h-screen w-screen', {
+        'dark bg-black': isDarkTheme,
+      })}
+    >
       <Hero
         toggleTheme={toggleTheme}
         togglePortfolio={togglePortfolio}
