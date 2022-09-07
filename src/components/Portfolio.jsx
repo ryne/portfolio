@@ -32,7 +32,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
         { 'pointer-events-auto blur-none': showPortfolio }
       )}
     >
-      <button
+      {/* <button
         className="group flex relative justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
         onClick={() => togglePortfolio()}
       >
@@ -51,7 +51,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             { 'animate-bounce': showPortfolio }
           )}
         />
-      </button>
+      </button> */}
     </section>
   );
 }
