@@ -9,5 +9,17 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener('resize', () => {
+        document
+          .querySelector(':root')
+          .style.setProperty('--vh', window.innerHeight / 100 + 'px');
+      });
+      window.addEventListener('load', () => {
+        document
+          .querySelector(':root')
+          .style.setProperty('--vh', window.innerHeight / 100 + 'px');
+      });
+    </script>
   </body>
 </html>

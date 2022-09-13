@@ -53,7 +53,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
         )}
         ref={refSplide}
       >
-        <header className="flex h-[7.5vh] w-full items-center justify-center absolute -top-[7.5vh]">
+        <header className="flex h-[calc(var(--vh)_*_7.5)] w-full items-center justify-center absolute -top-[calc(var(--vh)_*_7.5)]">
           <div className="text-center">
             <button
               onClick={() => togglePortfolio()}
@@ -70,9 +70,9 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             rewind: true,
             type: 'fade',
             width: '90vw',
-            height: '85vh',
+            height: 'calc(var(--vh) * 85)',
             fixedWidth: '90vw',
-            fixedHeight: '85vh',
+            fixedHeight: 'calc(var(--vh) * 85)',
             arrows: true,
             pagination: true,
             keyboard: 'focused',
@@ -84,7 +84,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               prev: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -mt-[20px] scale-50 active:opacity-50 active:scale-[.55] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert rotate-180',
               next: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -mt-[20px] scale-50 active:opacity-50 active:scale-[.55] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
               pagination:
-                'flex h-[7.5vh] w-full justify-center items-center absolute',
+                'flex h-[calc(var(--vh)_*_7.5)] w-full justify-center items-center absolute',
               page: 'mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-50 ease-in transition-all bg-black dark:bg-white',
             },
           }}
