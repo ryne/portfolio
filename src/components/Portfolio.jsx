@@ -1,5 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css/core';
 import clsx from 'clsx';
 import { BsFillFileRichtextFill, BsChevronUp } from 'react-icons/bs';
 
@@ -28,30 +30,57 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
     <section
       ref={refPortfolio}
       className={clsx(
-        'absolute pointer-events-none blur opacity-0 origin-bottom absolute flex w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in',
+        'overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom absolute w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in',
         { 'pointer-events-auto blur-none': showPortfolio }
       )}
     >
-      {/* <button
-        className="group flex relative justify-center w-12 h-9 origin-center text-4xl active:opacity-50 active:scale-95 ease-in transition-opacity duration-75 selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-        onClick={() => togglePortfolio()}
+      <header className="flex items-center justify-center absolute top-0 h-[7.5vh] w-[90vw]">
+        <div className="text-center">
+          <h1 className="-mt-1 text-xl md:text-2xl font-light italic">
+            Ryne
+            <span className="px-1 md:px-1.5 opacity-10 dark:opacity-20">/</span>
+            Not Ryan
+          </h1>
+        </div>
+      </header>
+      <Splide
+        aria-label="Portfolio"
+        options={{
+          rewind: true,
+          type: 'loop',
+          width: '90vw',
+          height: '85vh',
+          fixedWidth: '90vw',
+          fixedHeight: '85vh',
+          arrows: true,
+          pagination: true,
+          keyboard: 'focused',
+          keyboardPagination: true,
+          flickPower: 50,
+          flickMaxPages: 1,
+          waitForTransition: true,
+          classes: {
+            prev: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -mt-[20px] scale-50 active:opacity-30 active:scale-[0.6] transition-all duration-[50ms] dark:invert rotate-180',
+            next: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -mt-[20px] scale-50 active:opacity-30 active:scale-[0.6] transition-all duration-[50ms] dark:invert',
+            pagination:
+              'flex h-[7.5vh] w-full justify-center items-center absolute',
+            page: 'mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 transition-all duration-[400ms] bg-black dark:bg-white',
+          },
+        }}
       >
-        <span className="absolute top-0 z-50 after:content['test'] after:absolute after:top-0.5 after:left-1.5 after:w-[24px] after:h-[32px] after:bg-white after:z-[-1] dark:after:bg-black">
-          <BsFillFileRichtextFill className="group-hover:scale-105 transition-all" />
-        </span>
-        <span className="absolute top-0 z-10">
-          <BsFillFileRichtextFill className="group-hover:ml-8 group-hover:rotate-12 text-3xl rotate-6 mt-1 ml-6 opacity-20 transition-all" />
-        </span>
-        <span className="absolute top-0 z-10">
-          <BsFillFileRichtextFill className="group-hover:-ml-8 text-3xl group-hover:-rotate-12 -rotate-6 mt-1 -ml-6 opacity-20 transition-all" />
-        </span>
-        <BsChevronUp
-          className={clsx(
-            'group-hover:opacity-100 absolute text-lg -top-9 pointer-events-none opacity-20 transition-all',
-            { 'animate-bounce': showPortfolio }
-          )}
-        />
-      </button> */}
+        <SplideSlide>
+          <div className="flex w-full h-full bg-black/5 dark:bg-white/5"></div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="flex w-full h-full bg-black/10 dark:bg-white/10"></div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="flex w-full h-full bg-black/5 dark:bg-white/5"></div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="flex w-full h-full bg-black/10 dark:bg-white/10"></div>
+        </SplideSlide>
+      </Splide>
     </section>
   );
 }
