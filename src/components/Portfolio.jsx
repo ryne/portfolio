@@ -81,11 +81,11 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             flickMaxPages: 1,
             waitForTransition: true,
             classes: {
-              prev: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -mt-[20px] scale-50 active:opacity-50 active:scale-[.55] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert rotate-180',
-              next: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -mt-[20px] scale-50 active:opacity-50 active:scale-[.55] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
+              prev: 'rotate-180 hidden md:block z-50 cursor-pointer h-[40px] absolute -left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
+              next: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
               pagination:
                 'flex h-[calc(var(--vh)_*_7.5)] w-full justify-center items-center absolute',
-              page: 'mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-50 ease-in transition-all bg-black dark:bg-white',
+              page: 'mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-150 ease-in transition-all bg-black dark:bg-white',
             },
           }}
         >
