@@ -74,7 +74,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
         ref={refShadow}
       ></div>
       <div
-        className="absolute pointer-events-none opacity-0 bottom-9 z-10"
+        className="absolute pointer-events-none opacity-0 bottom-12 z-10"
         ref={refPortfolio}
       >
         <button

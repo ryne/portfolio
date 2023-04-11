@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.splide__pagination--ltr > li > .is-active {
+@layer utilities {
+  .clippy {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
+        5vw 5vw, 5vw calc(100% - 5vw), calc(100% - 5vw) calc(100% - 5vw), calc(100% - 5vw) 5vw, 5vw 5vw);
+  }
+}
+
+.splide__pagination--ltr>li>.is-active {
   opacity: 1;
   transform: scale(1);
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.splide__list {
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+}
+
+.splide__list:active {
+  transition: none;
 }

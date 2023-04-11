@@ -42,7 +42,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
     <section
       ref={refPortfolio}
       className={clsx(
-        'overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom absolute w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in',
+        'overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in',
         { 'pointer-events-auto blur-none': showPortfolio }
       )}
     >
@@ -53,26 +53,27 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
         )}
         ref={refSplide}
       >
-        <header className="flex h-[calc(var(--vh)_*_7.5)] w-full items-center justify-center absolute -top-[calc(var(--vh)_*_7.5)]">
+        <header className="flex w-full items-center justify-center absolute top-[calc(2.5vw_-_16px)] z-10">
           <div className="text-center">
             <button
               onClick={() => togglePortfolio()}
               className="group flex justify-center items-center w-8 h-8 origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
-              <CgClose />
+              <CgClose className="text-5xl" />
             </button>
           </div>
         </header>
 
         <Splide
+          onHidden={(splide, prev, next) => {
+            prev.slide.scrollTop = 0;
+          }}
           aria-label="Portfolio"
           options={{
-            rewind: true,
-            type: 'fade',
-            width: '90vw',
-            height: 'calc(var(--vh) * 85)',
-            fixedWidth: '90vw',
-            fixedHeight: 'calc(var(--vh) * 85)',
+            type: 'loop',
+            width: '100vw',
+            height: '100vh',
+            fixedWidth: '100vw',
             arrows: true,
             pagination: true,
             keyboard: 'focused',
@@ -81,27 +82,64 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             flickMaxPages: 1,
             waitForTransition: true,
             classes: {
-              prev: 'rotate-180 hidden md:block z-50 cursor-pointer h-[40px] absolute -left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
-              next: 'hidden md:block z-50 cursor-pointer h-[40px] absolute -right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
+              prev: 'z-10 rotate-180 hidden md:block z-50 cursor-pointer h-[40px] absolute left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
+              next: 'z-10 hidden md:block z-50 cursor-pointer h-[40px] absolute right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert',
               pagination:
-                'flex h-[calc(var(--vh)_*_7.5)] w-full justify-center items-center absolute',
+                'z-10 flex bottom-[calc(2.5vw_-_12px)] w-full justify-center items-center fixed',
               page: 'mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-150 ease-in transition-all bg-black dark:bg-white',
             },
           }}
         >
-          <SplideSlide>
-            <div className="flex w-full h-full bg-black/50 dark:bg-white/50"></div>
+          <SplideSlide className="overflow-y-auto">
+            <div className="flex items-start justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+            <div className="flex items-center justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+            <div className="flex items-end justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
           </SplideSlide>
-          <SplideSlide>
-            <div className="flex w-full h-full bg-black/75 dark:bg-white/75"></div>
+          <SplideSlide className="overflow-y-auto">
+            <div className="flex items-start justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+            <div className="flex items-start justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
           </SplideSlide>
-          <SplideSlide>
-            <div className="flex w-full h-full bg-black/50 dark:bg-white/50"></div>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="flex w-full h-full bg-black/75 dark:bg-white/75"></div>
+          <SplideSlide className="overflow-y-auto">
+            <div className="flex items-start justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+            <div className="flex items-start justify-center w-full p-[5vw] h-[100vh] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
           </SplideSlide>
         </Splide>
+        <span className="w-full h-full border-[5vw] bg-transparent border-white/80 dark:border-black/80 backdrop-blur-lg fixed inset-0 pointer-events-none saturate-200 clippy"></span>
       </div>
     </section>
   );
