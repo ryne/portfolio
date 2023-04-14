@@ -14,7 +14,7 @@ const App = () => {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-  const [showPortfolio, setShowPortfolio] = useState(true);
+  const [showPortfolio, setShowPortfolio] = useState(false);
 
   const toggleTheme = () => {
     localStorage.setItem('darkTheme', !isDarkTheme);

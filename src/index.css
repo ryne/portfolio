@@ -5,7 +5,14 @@
 @layer utilities {
   .clippy {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
-        5vw 5vw, 5vw calc(100% - 5vw), calc(100% - 5vw) calc(100% - 5vw), calc(100% - 5vw) 5vw, 5vw 5vw);
+        40px 40px, 40px calc(100% - 40px), calc(100% - 40px) calc(100% - 40px), calc(100% - 40px) 40px, 40px 40px);
+  }
+
+  @media (min-width: 767px) {
+    .clippy {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
+          5vw 5vw, 5vw calc(100% - 5vw), calc(100% - 5vw) calc(100% - 5vw), calc(100% - 5vw) 5vw, 5vw 5vw);
+    }
   }
 }
 
@@ -18,10 +25,14 @@
   display: none;
 }
 
-.splide__list {
-  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
-}
+@media (min-width: 767px) {
+  .splide__list {
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+    cursor: grab;
+  }
 
-.splide__list:active {
-  transition: none;
+  .splide__list:active {
+    transition: none;
+    cursor: grabbing;
+  }
 }
