@@ -5,7 +5,7 @@
 @layer utilities {
   .clippy {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
-        40px 40px, 40px calc(100% - 40px), calc(100% - 40px) calc(100% - 40px), calc(100% - 40px) 40px, 40px 40px);
+        10px 10px, 10px calc(100% - 40px), calc(100% - 10px) calc(100% - 40px), calc(100% - 10px) 40px, 10px 40px)
   }
 
   @media (min-width: 767px) {

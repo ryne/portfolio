@@ -91,33 +91,19 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
           }}
         >
           <SplideSlide className="overflow-y-auto">
-            <div className="flex items-start justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
                 className="block w-[640px] h-[480px]"
                 src="https://placekitten.com/640/480"
               />
             </div>
-            <div className="flex items-center justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div className="flex items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
                 className="block w-[640px] h-[480px]"
                 src="https://placekitten.com/640/480"
               />
             </div>
-            <div className="flex items-end justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
-            </div>
-          </SplideSlide>
-          <SplideSlide className="overflow-y-auto">
-            <div className="flex items-start justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
-            </div>
-            <div className="flex items-start justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div className="flex items-end justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
                 className="block w-[640px] h-[480px]"
                 src="https://placekitten.com/640/480"
@@ -125,13 +111,27 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
-            <div className="flex items-start justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
                 className="block w-[640px] h-[480px]"
                 src="https://placekitten.com/640/480"
               />
             </div>
-            <div className="flex items-start justify-center w-full p-[40px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
+            </div>
+            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
                 className="block w-[640px] h-[480px]"
                 src="https://placekitten.com/640/480"
