@@ -2,7 +2,6 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
-import { Parallax } from 'react-scroll-parallax';
 import clsx from 'clsx';
 import { CgClose } from 'react-icons/cg';
 
@@ -93,12 +92,10 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
         >
           <SplideSlide className="overflow-y-auto">
             <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <Parallax translateY={[-20, 20]}>
-                <img
-                  className="block w-[640px] h-[480px]"
-                  src="https://placekitten.com/640/480"
-                />
-              </Parallax>
+              <img
+                className="block w-[640px] h-[480px]"
+                src="https://placekitten.com/640/480"
+              />
             </div>
             <div className="flex items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
               <img
