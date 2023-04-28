@@ -65,7 +65,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
           <span className="px-2 md:px-3 opacity-10 dark:opacity-20">/</span>
           Not Ryan
         </h1>
-        <p className="mt-2 md:mt-3 text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-50">
+        <p className="mt-4 md:mt-6 text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-50">
           Web Development &amp; Design
         </p>
       </div>
