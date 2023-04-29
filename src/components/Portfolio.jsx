@@ -5,11 +5,13 @@ import '@splidejs/react-splide/css/core';
 import clsx from 'clsx';
 import { CgClose } from 'react-icons/cg';
 import { BsChevronDown } from 'react-icons/bs';
+import { usePalette } from 'react-palette';
 import logoVimo from '../assets/vimo/logo_blue_full_horizontal.png';
 
 function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refPortfolio = useRef();
   const refSplide = useRef();
+  const { data, loading, error } = usePalette(logoVimo);
 
   useEffect(() => {
     if (showPortfolio === true) {
@@ -65,7 +67,6 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </button>
           </div>
         </header>
-
         <Splide
           onHidden={(splide, prev, next) => {
             prev.slide.scrollTop = 0;
@@ -93,18 +94,28 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
           }}
         >
           <SplideSlide className="overflow-y-auto">
-            <div className="flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
+            <div
+              style={{
+                background: `${data.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
                   src={logoVimo}
                 />
               </div>
-              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-50">
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-70">
                 <p className="block w-full">Custom WordPress theme</p>
               </div>
               <div className="flex w-full justify-center mt-9 md:mt-12">
-                <BsChevronDown className="animate-bounce block text-xl md:text-3xl pointer-events-none opacity-50 transition-all" />
+                <BsChevronDown
+                  style={{
+                    color: `${data.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
               </div>
             </div>
             <div className="flex items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
