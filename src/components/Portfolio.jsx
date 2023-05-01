@@ -5,13 +5,15 @@ import '@splidejs/react-splide/css/core';
 import clsx from 'clsx';
 import { CgClose } from 'react-icons/cg';
 import { BsChevronDown } from 'react-icons/bs';
-import { usePalette } from 'react-palette';
-import logoVimo from '../assets/vimo/logo_blue_full_horizontal.png';
 
-function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
+function Portfolio({
+  toggleTheme,
+  showPortfolio,
+  togglePortfolio,
+  PortfolioDataMap,
+}) {
   const refPortfolio = useRef();
   const refSplide = useRef();
-  const { data, loading, error } = usePalette(logoVimo);
 
   useEffect(() => {
     if (showPortfolio === true) {
@@ -96,23 +98,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${data.vibrant}22`,
+                background: `${PortfolioDataMap[0].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={logoVimo}
+                  src={PortfolioDataMap[0].src}
                 />
               </div>
-              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase opacity-70">
-                <p className="block w-full">Custom WordPress theme</p>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[0].description}
+                </p>
               </div>
               <div className="flex w-full justify-center mt-9 md:mt-12">
                 <BsChevronDown
                   style={{
-                    color: `${data.vibrant}`,
+                    color: `${PortfolioDataMap[0].colors.vibrant}`,
                   }}
                   className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
                 />
