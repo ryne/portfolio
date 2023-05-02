@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { usePalette } from 'react-palette';
 import clsx from 'clsx';
-import PortfolioData from './data/PortfolioData';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
 
@@ -16,7 +14,7 @@ const App = () => {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-  const [showPortfolio, setShowPortfolio] = useState(!false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
 
   const toggleTheme = () => {
     localStorage.setItem('darkTheme', !isDarkTheme);
@@ -25,11 +23,6 @@ const App = () => {
   const togglePortfolio = () => {
     setShowPortfolio(!showPortfolio);
   };
-
-  const PortfolioDataMap = PortfolioData.map((item) => {
-    const { data, loading, error } = usePalette(item.src);
-    return { ...item, colors: data };
-  });
 
   return (
     <div
@@ -47,7 +40,6 @@ const App = () => {
         toggleTheme={toggleTheme}
         togglePortfolio={togglePortfolio}
         showPortfolio={showPortfolio}
-        PortfolioDataMap={PortfolioDataMap}
       />
     </div>
   );

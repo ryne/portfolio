@@ -1,19 +1,21 @@
 import { useRef, useEffect } from 'react';
+import clsx from 'clsx';
 import { gsap } from 'gsap';
+import { usePalette } from 'react-palette';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
-import clsx from 'clsx';
+import PortfolioData from '../data/PortfolioData';
 import { CgClose } from 'react-icons/cg';
 import { BsChevronDown } from 'react-icons/bs';
 
-function Portfolio({
-  toggleTheme,
-  showPortfolio,
-  togglePortfolio,
-  PortfolioDataMap,
-}) {
+function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refPortfolio = useRef();
   const refSplide = useRef();
+
+  const PortfolioDataMap = PortfolioData.map((item) => {
+    const { data, loading, error } = usePalette(item.src);
+    return { ...item, colors: data };
+  });
 
   useEffect(() => {
     if (showPortfolio === true) {
@@ -75,7 +77,7 @@ function Portfolio({
           }}
           aria-label="Portfolio"
           options={{
-            type: 'loop',
+            type: 'slide',
             width: '100vw',
             height: 'calc(var(--vh) * 100)',
             fixedWidth: '100vw',
@@ -136,31 +138,227 @@ function Portfolio({
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
-            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
-            </div>
-            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
+            <div
+              style={{
+                background: `${PortfolioDataMap[1].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[1].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[1].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[1].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
-            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
+            <div
+              style={{
+                background: `${PortfolioDataMap[2].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[2].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[2].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[2].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
             </div>
-            <div className="flex items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[3].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[3].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[3].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[3].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[4].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[4].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[4].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[4].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[5].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[5].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[5].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[5].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[6].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[6].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[6].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[6].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[7].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[7].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[7].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[7].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[8].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[8].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[8].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[8].colors.vibrant}`,
+                  }}
+                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
             </div>
           </SplideSlide>
         </Splide>
