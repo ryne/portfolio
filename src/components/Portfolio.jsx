@@ -6,7 +6,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 import PortfolioData from '../data/PortfolioData';
 import { CgClose } from 'react-icons/cg';
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown, BsBoxArrowUpRight } from 'react-icons/bs';
 
 function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refPortfolio = useRef();
@@ -124,12 +124,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[0].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://vimodigital.com/"
+                  title="Open Vimo Digital in new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  Vimodigital.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[0].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
