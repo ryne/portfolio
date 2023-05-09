@@ -72,8 +72,17 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
           </div>
         </header>
         <Splide
+          onActive={(splide, prev, next) => {
+            prev.slide
+              .querySelectorAll('video')
+              .forEach((video) => video.play());
+          }}
           onHidden={(splide, prev, next) => {
             prev.slide.scrollTop = 0;
+            prev.slide.querySelectorAll('video').forEach((video) => {
+              video.currentTime = '0';
+              video.pause();
+            });
           }}
           aria-label="Portfolio"
           options={{
@@ -120,21 +129,29 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[0].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none"
                 />
               </div>
             </div>
-            <div className="flex items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
-            </div>
-            <div className="flex items-end justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)] bg-zinc-100 dark:bg-zinc-900">
-              <img
-                className="block w-[640px] h-[480px]"
-                src="https://placekitten.com/640/480"
-              />
+            <div
+              style={{
+                background: `${PortfolioDataMap[0].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[0].assets.video}
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
@@ -142,7 +159,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               style={{
                 background: `${PortfolioDataMap[1].colors.vibrant}22`,
               }}
-              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
@@ -160,7 +177,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[1].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -188,7 +205,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[2].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -216,7 +233,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[3].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -244,7 +261,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[4].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -272,7 +289,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[5].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -300,7 +317,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[6].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -328,7 +345,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[7].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
@@ -356,13 +373,41 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   style={{
                     color: `${PortfolioDataMap[8].colors.vibrant}`,
                   }}
-                  className="animate-bounce block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="overflow-y-auto">
+            <div
+              style={{
+                background: `${PortfolioDataMap[9].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <div className="flex w-full justify-center">
+                <img
+                  className="block w-[calc(100%_-_20px)] max-w-[480px]"
+                  src={PortfolioDataMap[9].src}
+                />
+              </div>
+              <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
+                <p className="block w-full">
+                  {PortfolioDataMap[9].description}
+                </p>
+              </div>
+              <div className="flex w-full justify-center mt-9 md:mt-12">
+                <BsChevronDown
+                  style={{
+                    color: `${PortfolioDataMap[9].colors.vibrant}`,
+                  }}
+                  className="block text-xl md:text-3xl pointer-events-none transition-all"
                 />
               </div>
             </div>
           </SplideSlide>
         </Splide>
-        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/80 dark:border-black/80 backdrop-blur-lg fixed inset-0 saturate-200 clippy"></span>
+        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/80 dark:border-black/80 fixed inset-0 saturate-200 clippy"></span>
       </div>
     </section>
   );

@@ -7,6 +7,9 @@ import logo6 from '../assets/logos/whittingham-creations.png';
 import logo7 from '../assets/logos/shortcut-buddy.png';
 import logo8 from '../assets/logos/better-phas-journal.jpg';
 import logo9 from '../assets/logos/codepen.png';
+import logo10 from '../assets/logos/homebridge-financial.png';
+
+import vimo1 from '../assets/slides/vimo/vimo-digital-overview.mp4';
 
 const PortfolioData = [
   {
@@ -15,6 +18,7 @@ const PortfolioData = [
     src: logo1,
     title: 'Vimo Digital',
     description: 'Custom WordPress Theme',
+    assets: { video: vimo1 },
   },
   {
     id: 2,
@@ -25,34 +29,41 @@ const PortfolioData = [
   },
   {
     id: 3,
-    url: 'https://telostennis.com/',
-    src: logo3,
-    title: 'Telos Tennis',
-    description: 'Custom WordPress Theme',
-  },
-  {
-    id: 4,
     url: 'https://themoderngroom.com/suit-builder/',
     src: logo4,
     title: 'The Modern Groom',
     description: 'Custom Vue.js Application',
   },
   {
-    id: 5,
+    id: 4,
     url: 'http://hacimechanical.com/',
     src: logo5,
     title: 'Haci Mechanical',
     description: 'Custom WordPress Theme',
   },
   {
-    id: 6,
+    id: 5,
     url: 'http://whittinghamcreations.com/',
     src: logo6,
     title: 'Whittingham Creations',
     description: 'Custom Parallax Website',
   },
   {
+    id: 6,
+    url: 'https://telostennis.com/',
+    src: logo3,
+    title: 'Telos Tennis',
+    description: 'Custom WordPress Theme',
+  },
+  {
     id: 7,
+    url: 'https://redlinemarketingco.com/hb/lookalike/',
+    src: logo10,
+    title: 'Homebridge Financial',
+    description: 'Custom Landing Page',
+  },
+  {
+    id: 8,
     url: 'https://shortcut-buddy.netlify.app/',
     git: 'https://github.com/ryne/shortcut-buddy',
     src: logo7,
@@ -60,7 +71,7 @@ const PortfolioData = [
     description: 'Custom React Application',
   },
   {
-    id: 8,
+    id: 9,
     url: 'https://better-phasmophobia-journal.netlify.app/',
     git: 'https://github.com/The-Zen-Garden/better-phasmophobia-journal',
     src: logo8,
@@ -68,7 +79,7 @@ const PortfolioData = [
     description: 'Custom React Application',
   },
   {
-    id: 9,
+    id: 10,
     url: 'https://codepen.io/ryne',
     src: logo9,
     title: 'CodePen.io',
