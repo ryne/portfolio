@@ -127,7 +127,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
                   href="https://vimodigital.com/"
-                  title="Open Vimo Digital in new window"
+                  title="Open Vimo Digital in a new window"
                   target="_blank"
                   className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
                 >
@@ -181,12 +181,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[1].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://www.growwithprevail.com/"
+                  title="Open Prevail Legal Marketing in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  growwithprevail.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[1].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -209,12 +218,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[2].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://themoderngroom.com/suit-builder/"
+                  title="Open The Modern Groom Suit Builder in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  themoderngroom.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[2].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -237,12 +255,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[3].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://hacimechanical.com/"
+                  title="Open Haci Mechanical in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  hacimechanical.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[3].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -265,12 +292,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[4].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="http://whittinghamcreations.com/"
+                  title="Open Whittingham Creations in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  whittinghamcreations.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[4].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -293,12 +329,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[5].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://telostennis.com/"
+                  title="Open Telos Tennis in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  telostennis.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[5].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -321,12 +366,21 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[6].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://redlinemarketingco.com/hb/lookalike/"
+                  title="Open HomeBridge LP in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  redlinemarketingco.com
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[6].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -349,12 +403,32 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[7].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <div className="flex flex-row items-center justify-center w-full">
+                  <a
+                    href="https://github.com/ryne/shortcut-buddy"
+                    title="Open Shortcut Buddy repo in a new window"
+                    target="_blank"
+                    className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                  >
+                    GitHub
+                    <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                  </a>
+                  <a
+                    href="https://shortcut-buddy.netlify.app/"
+                    title="Open Shortcut Buddy (live site) in a new window"
+                    target="_blank"
+                    className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                  >
+                    Live
+                    <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                  </a>
+                </div>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[7].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -377,12 +451,32 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[8].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <div className="flex flex-row items-center justify-center w-full">
+                  <a
+                    href="https://github.com/The-Zen-Garden/better-phasmophobia-journal"
+                    title="Open Better Phasmophobia Journal repo in a new window"
+                    target="_blank"
+                    className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                  >
+                    GitHub
+                    <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                  </a>
+                  <a
+                    href="https://better-phasmophobia-journal.netlify.app/"
+                    title="Open Better Phasmophobia Journal (live site) in a new window"
+                    target="_blank"
+                    className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                  >
+                    Live
+                    <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                  </a>
+                </div>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[8].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
@@ -405,18 +499,27 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   {PortfolioDataMap[9].description}
                 </p>
               </div>
-              <div className="flex w-full justify-center mt-9 md:mt-12">
+              <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
+                <a
+                  href="https://codepen.io/ryne"
+                  title="Open Ryne's Codepen in a new window"
+                  target="_blank"
+                  className="block opacity-50 hover:opacity-100 p-1.5 px-3 text-xs tracking-[.3em] md:tracking-[.4em] uppercase transition-all"
+                >
+                  codepen.io/ryne
+                  <BsBoxArrowUpRight className="inline ml-1 -mt-1.5 text-sm" />
+                </a>
                 <BsChevronDown
                   style={{
                     color: `${PortfolioDataMap[9].colors.vibrant}`,
                   }}
-                  className="block text-xl md:text-3xl pointer-events-none transition-all"
+                  className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
             </div>
           </SplideSlide>
         </Splide>
-        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/80 dark:border-black/80 fixed inset-0 saturate-200 clippy"></span>
+        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/80 dark:border-black/80 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
       </div>
     </section>
   );
