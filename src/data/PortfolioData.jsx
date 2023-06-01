@@ -9,7 +9,16 @@ import logo8 from '../assets/logos/better-phas-journal.jpg';
 import logo9 from '../assets/logos/codepen.png';
 import logo10 from '../assets/logos/homebridge-financial.png';
 
-import vimo1 from '../assets/slides/vimo/vimo-digital-overview.mp4';
+import vimo1 from '../assets/slides/vimo/overview.mp4';
+import prevail1 from '../assets/slides/prevail/overview.mp4';
+import tmg1 from '../assets/slides/tmg/overview.mp4';
+import haci1 from '../assets/slides/haci/overview.mp4';
+import wc1 from '../assets/slides/wc/overview.mp4';
+import tt1 from '../assets/slides/tt/overview.mp4';
+import hb1 from '../assets/slides/hb/overview.mp4';
+import sb1 from '../assets/slides/sb/overview.mp4';
+import bpj1 from '../assets/slides/bpj/overview.mp4';
+import cp1 from '../assets/slides/cp/overview.mp4';
 
 const PortfolioData = [
   {
@@ -26,6 +35,7 @@ const PortfolioData = [
     src: logo2,
     title: 'Prevail Legal Marketing',
     description: 'Custom WordPress Theme',
+    assets: { video: prevail1 },
   },
   {
     id: 3,
@@ -33,6 +43,7 @@ const PortfolioData = [
     src: logo4,
     title: 'The Modern Groom',
     description: 'Custom Vue.js Application',
+    assets: { video: tmg1 },
   },
   {
     id: 4,
@@ -40,6 +51,7 @@ const PortfolioData = [
     src: logo5,
     title: 'Haci Mechanical',
     description: 'Custom WordPress Theme',
+    assets: { video: haci1 },
   },
   {
     id: 5,
@@ -47,6 +59,7 @@ const PortfolioData = [
     src: logo6,
     title: 'Whittingham Creations',
     description: 'Custom Parallax Website',
+    assets: { video: wc1 },
   },
   {
     id: 6,
@@ -54,6 +67,7 @@ const PortfolioData = [
     src: logo3,
     title: 'Telos Tennis',
     description: 'Custom WordPress Theme',
+    assets: { video: tt1 },
   },
   {
     id: 7,
@@ -61,6 +75,7 @@ const PortfolioData = [
     src: logo10,
     title: 'Homebridge Financial',
     description: 'Custom Landing Page',
+    assets: { video: hb1 },
   },
   {
     id: 8,
@@ -69,6 +84,7 @@ const PortfolioData = [
     src: logo7,
     title: 'Shortcut Buddy',
     description: 'Custom React Application',
+    assets: { video: sb1 },
   },
   {
     id: 9,
@@ -77,6 +93,7 @@ const PortfolioData = [
     src: logo8,
     title: 'Better Phasmophobia Journal',
     description: 'Custom React Application',
+    assets: { video: bpj1 },
   },
   {
     id: 10,
@@ -84,6 +101,7 @@ const PortfolioData = [
     src: logo9,
     title: 'CodePen.io',
     description: 'CodePen.io Playground Snippets',
+    assets: { video: cp1 },
   },
 ];
 

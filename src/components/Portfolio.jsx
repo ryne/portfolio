@@ -199,6 +199,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[1].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[1].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
@@ -235,6 +255,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
+            </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[2].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[2].assets.video}
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
@@ -273,6 +313,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[3].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[3].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
@@ -309,6 +369,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
+            </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[4].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[4].assets.video}
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
@@ -347,6 +427,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[5].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[5].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
@@ -383,6 +483,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
               </div>
+            </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[6].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[6].assets.video}
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
@@ -432,6 +552,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[7].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[7].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
@@ -480,6 +620,26 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[8].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[8].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
@@ -517,9 +677,29 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 />
               </div>
             </div>
+            <div
+              style={{
+                background: `${PortfolioDataMap[9].colors.vibrant}22`,
+              }}
+              className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+            >
+              <video
+                loop
+                muted
+                className="aspect-video h-full cursor-pointer"
+                onClick={(e) =>
+                  e.target.paused ? e.target.play() : e.target.pause()
+                }
+              >
+                <source
+                  src={PortfolioDataMap[9].assets.video}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </SplideSlide>
         </Splide>
-        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/80 dark:border-black/80 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
+        <span className="w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
       </div>
     </section>
   );
