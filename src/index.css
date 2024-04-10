@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .pixelated {
+    image-rendering: pixelated;
+  }
   .clippy {
     clip-path: polygon(
       0 0,
