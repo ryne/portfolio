@@ -19,7 +19,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
 
   useEffect(() => {
     if (showPortfolio === true) {
-      gsap.to(refPortfolio.current, {
+      gsap.to(refPortfolio.current, { 
         opacity: 1,
         delay: 0.15,
         duration: 0.3,

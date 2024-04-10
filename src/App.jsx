@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import clsx from 'clsx';
-import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
+import Hero from './pages/Hero';
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
   const getCurrentTheme = () => {
