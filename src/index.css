@@ -4,19 +4,39 @@
 
 @layer utilities {
   .clippy {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
-        10px 10px, 10px calc(100% - 40px), calc(100% - 10px) calc(100% - 40px), calc(100% - 10px) 40px, 10px 40px)
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      10px 10px,
+      10px calc(100% - 40px),
+      calc(100% - 10px) calc(100% - 40px),
+      calc(100% - 10px) 40px,
+      10px 40px
+    );
   }
 
   @media (min-width: 767px) {
     .clippy {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0,
-          5vw 5vw, 5vw calc(100% - 5vw), calc(100% - 5vw) calc(100% - 5vw), calc(100% - 5vw) 5vw, 5vw 5vw);
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 0,
+        5vw 5vw,
+        5vw calc(100% - 5vw),
+        calc(100% - 5vw) calc(100% - 5vw),
+        calc(100% - 5vw) 5vw,
+        5vw 5vw
+      );
     }
   }
 }
 
-.splide__pagination--ltr>li>.is-active {
+.splide__pagination--ltr > li > .is-active {
   opacity: 1;
   transform: scale(1);
 }

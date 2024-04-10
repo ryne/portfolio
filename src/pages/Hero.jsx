@@ -1,8 +1,8 @@
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import clsx from 'clsx';
-import light from '../assets/light.png';
-import { BsFillFileRichtextFill, BsChevronDown } from 'react-icons/bs';
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import clsx from "clsx";
+import light from "../assets/light.png";
+import { BsFillFileRichtextFill, BsChevronDown } from "react-icons/bs";
 
 function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refLight = useRef();
@@ -15,20 +15,20 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
       y: -112,
       delay: 0.5,
       duration: 1.5,
-      ease: 'power4',
+      ease: "power4",
     });
     gsap.to(refShadow.current, {
       y: 112,
       delay: 0.5,
       duration: 1.5,
-      transform: 'scale(3,1.5)',
+      transform: "scale(3,1.5)",
       opacity: 0.2,
-      ease: 'power4',
+      ease: "power4",
     });
     gsap.to(refText.current, {
       delay: 0.7,
       duration: 1.5,
-      ease: 'power1',
+      ease: "power1",
       opacity: 1,
     });
     gsap.to(refPortfolio.current, {
@@ -36,18 +36,18 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
       delay: 2,
       duration: 1,
       opacity: 1,
-      pointerEvents: 'all',
-      ease: 'power4',
+      pointerEvents: "all",
+      ease: "power4",
     });
   });
 
   return (
     <section
       className={clsx(
-        'absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in',
+        "absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
         {
-          'pointer-events-none blur': showPortfolio,
-        }
+          "pointer-events-none blur": showPortfolio,
+        },
       )}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
@@ -92,8 +92,8 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
           </span>
           <BsChevronDown
             className={clsx(
-              'group-hover:opacity-100 absolute text-lg -bottom-9 pointer-events-none opacity-20 transition-all',
-              { 'animate-bounce': !showPortfolio }
+              "group-hover:opacity-100 absolute text-lg -bottom-9 pointer-events-none opacity-20 transition-all",
+              { "animate-bounce": !showPortfolio },
             )}
           />
         </button>

@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import clsx from 'clsx';
-import Hero from './pages/Hero';
-import Portfolio from './pages/Portfolio';
+import { useState } from "react";
+import clsx from "clsx";
+import Hero from "./pages/Hero";
+import Portfolio from "./pages/Portfolio";
 
 const App = () => {
   const getCurrentTheme = () => {
-    const localTheme = localStorage.getItem('darkTheme');
+    const localTheme = localStorage.getItem("darkTheme");
     return localTheme
-      ? localTheme === 'true'
+      ? localTheme === "true"
         ? true
         : false
-      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const [showPortfolio, setShowPortfolio] = useState(!false);
 
   const toggleTheme = () => {
-    localStorage.setItem('darkTheme', !isDarkTheme);
+    localStorage.setItem("darkTheme", !isDarkTheme);
     setIsDarkTheme(!isDarkTheme);
   };
   const togglePortfolio = () => {
@@ -27,8 +27,8 @@ const App = () => {
   return (
     <div
       id="app"
-      className={clsx('bg-white h-screen w-screen', {
-        'dark bg-black': isDarkTheme,
+      className={clsx("bg-white h-screen w-screen", {
+        "dark bg-black": isDarkTheme,
       })}
     >
       <Hero
