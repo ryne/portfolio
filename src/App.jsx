@@ -1,9 +1,10 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 // import { usePalette } from "react-palette";
 import clsx from "clsx";
 import Hero from "./pages/Hero";
 import Portfolio from "./pages/Portfolio";
 import PortfolioData from "./data/PortfolioData";
+import { ImSpinner9 } from "react-icons/im";
 
 const App = () => {
   const getCurrentTheme = () => {
@@ -17,6 +18,19 @@ const App = () => {
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
 
   // const PortfolioData = PortfolioData.map((item) => {
   //   const { data, loading, error } = usePalette(item.src);
@@ -31,6 +45,22 @@ const App = () => {
   const togglePortfolio = () => {
     setShowPortfolio(!showPortfolio);
   };
+
+  if (isLoading) {
+    // Return a loading indicator while data is loading
+    return (
+      <div
+        id="app"
+        className={clsx("bg-white h-screen w-screen", {
+          "dark bg-black": isDarkTheme,
+        })}
+      >
+        <span className="flex h-full w-full justify-center items-center">
+          <ImSpinner9 className="text-3xl animate-spin text-black dark:text-white" />
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div
