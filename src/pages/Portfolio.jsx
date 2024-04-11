@@ -1,10 +1,8 @@
 import { useRef, useEffect } from "react";
 import clsx from "clsx";
 import { gsap } from "gsap";
-import { usePalette } from "react-palette";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
-import PortfolioData from "../data/PortfolioData";
 import { BsChevronDown, BsBoxArrowUpRight } from "react-icons/bs";
 import {
   FaGithub,
@@ -14,14 +12,14 @@ import {
 } from "react-icons/fa6";
 import light from "../assets/light.png";
 
-function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
+function Portfolio({
+  toggleTheme,
+  showPortfolio,
+  togglePortfolio,
+  PortfolioData,
+}) {
   const refPortfolio = useRef();
   const refSplide = useRef();
-
-  const PortfolioDataMap = PortfolioData.map((item) => {
-    const { data, loading, error } = usePalette(item.src);
-    return { ...item, colors: data };
-  });
 
   useEffect(() => {
     if (showPortfolio === true) {
@@ -69,7 +67,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
       >
         <header className="flex w-full items-center justify-center content-center absolute top-[8px] sm:top-[12px] md:top-[calc(2.5vw_-_16px)] z-10">
           <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
+            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] 2xl:-mt-[5px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
               Ryne
               <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
                 /
@@ -158,20 +156,18 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[0].colors.vibrant}22`,
+                background: `${PortfolioData[0].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[50px_5vw] lg:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[0].src}
+                  src={PortfolioData[0].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[0].description}
-                </p>
+                <p className="block w-full">{PortfolioData[0].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -185,7 +181,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[0].colors.vibrant}`,
+                    color: `${PortfolioData[0].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -193,7 +189,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[0].colors.vibrant}22`,
+                background: `${PortfolioData[0].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -205,30 +201,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[0].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[0].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[1].colors.vibrant}22`,
+                background: `${PortfolioData[1].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[1].src}
+                  src={PortfolioData[1].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[1].description}
-                </p>
+                <p className="block w-full">{PortfolioData[1].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -242,7 +233,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[1].colors.vibrant}`,
+                    color: `${PortfolioData[1].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -250,7 +241,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[1].colors.vibrant}22`,
+                background: `${PortfolioData[1].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -262,30 +253,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[1].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[1].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[2].colors.vibrant}22`,
+                background: `${PortfolioData[2].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[2].src}
+                  src={PortfolioData[2].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[2].description}
-                </p>
+                <p className="block w-full">{PortfolioData[2].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -299,7 +285,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[2].colors.vibrant}`,
+                    color: `${PortfolioData[2].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -307,7 +293,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[2].colors.vibrant}22`,
+                background: `${PortfolioData[2].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -319,30 +305,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[2].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[2].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[3].colors.vibrant}22`,
+                background: `${PortfolioData[3].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[3].src}
+                  src={PortfolioData[3].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[3].description}
-                </p>
+                <p className="block w-full">{PortfolioData[3].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -356,7 +337,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[3].colors.vibrant}`,
+                    color: `${PortfolioData[3].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -364,7 +345,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[3].colors.vibrant}22`,
+                background: `${PortfolioData[3].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -376,30 +357,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[3].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[3].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[4].colors.vibrant}22`,
+                background: `${PortfolioData[4].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[4].src}
+                  src={PortfolioData[4].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[4].description}
-                </p>
+                <p className="block w-full">{PortfolioData[4].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -413,7 +389,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[4].colors.vibrant}`,
+                    color: `${PortfolioData[4].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -421,7 +397,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[4].colors.vibrant}22`,
+                background: `${PortfolioData[4].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -433,30 +409,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[4].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[4].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[5].colors.vibrant}22`,
+                background: `${PortfolioData[5].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[5].src}
+                  src={PortfolioData[5].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[5].description}
-                </p>
+                <p className="block w-full">{PortfolioData[5].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -470,7 +441,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[5].colors.vibrant}`,
+                    color: `${PortfolioData[5].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -478,7 +449,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[5].colors.vibrant}22`,
+                background: `${PortfolioData[5].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -490,30 +461,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[5].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[5].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[6].colors.vibrant}22`,
+                background: `${PortfolioData[6].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[6].src}
+                  src={PortfolioData[6].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[6].description}
-                </p>
+                <p className="block w-full">{PortfolioData[6].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -527,7 +493,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[6].colors.vibrant}`,
+                    color: `${PortfolioData[6].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -535,7 +501,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[6].colors.vibrant}22`,
+                background: `${PortfolioData[6].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -547,30 +513,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[6].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[6].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[7].colors.vibrant}22`,
+                background: `${PortfolioData[7].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[7].src}
+                  src={PortfolioData[7].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[7].description}
-                </p>
+                <p className="block w-full">{PortfolioData[7].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <div className="flex flex-row items-center justify-center w-full">
@@ -595,7 +556,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </div>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[7].colors.vibrant}`,
+                    color: `${PortfolioData[7].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -603,7 +564,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[7].colors.vibrant}22`,
+                background: `${PortfolioData[7].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -615,30 +576,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[7].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[7].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[8].colors.vibrant}22`,
+                background: `${PortfolioData[8].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[8].src}
+                  src={PortfolioData[8].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[8].description}
-                </p>
+                <p className="block w-full">{PortfolioData[8].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <div className="flex flex-row items-center justify-center w-full">
@@ -663,7 +619,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </div>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[8].colors.vibrant}`,
+                    color: `${PortfolioData[8].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -671,7 +627,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[8].colors.vibrant}22`,
+                background: `${PortfolioData[8].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -683,30 +639,25 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[8].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[8].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>
           <SplideSlide className="overflow-y-auto">
             <div
               style={{
-                background: `${PortfolioDataMap[9].colors.vibrant}22`,
+                background: `${PortfolioData[9].colors.vibrant}22`,
               }}
               className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
                   className="block w-[calc(100%_-_20px)] max-w-[480px]"
-                  src={PortfolioDataMap[9].src}
+                  src={PortfolioData[9].src}
                 />
               </div>
               <div className="flex flex-col w-full justify-center mt-9 md:mt-12 text-center text-sm md:text-base tracking-[.3em] md:tracking-[.4em] uppercase">
-                <p className="block w-full">
-                  {PortfolioDataMap[9].description}
-                </p>
+                <p className="block w-full">{PortfolioData[9].description}</p>
               </div>
               <div className="flex flex-col w-full items-center justify-center mt-1.5 md:mt-2">
                 <a
@@ -720,7 +671,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                 </a>
                 <BsChevronDown
                   style={{
-                    color: `${PortfolioDataMap[9].colors.vibrant}`,
+                    color: `${PortfolioData[9].colors.vibrant}`,
                   }}
                   className="block text-xl md:text-3xl pointer-events-none mt-6 md:mt-8"
                 />
@@ -728,7 +679,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
             <div
               style={{
-                background: `${PortfolioDataMap[9].colors.vibrant}22`,
+                background: `${PortfolioData[9].colors.vibrant}22`,
               }}
               className={`flex flex-col items-center justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
@@ -740,10 +691,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
                   e.target.paused ? e.target.play() : e.target.pause()
                 }
               >
-                <source
-                  src={PortfolioDataMap[9].assets.video}
-                  type="video/mp4"
-                />
+                <source src={PortfolioData[9].assets.video} type="video/mp4" />
               </video>
             </div>
           </SplideSlide>

@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
+// import { usePalette } from "react-palette";
 import clsx from "clsx";
 import Hero from "./pages/Hero";
 import Portfolio from "./pages/Portfolio";
+import PortfolioData from "./data/PortfolioData";
 
 const App = () => {
   const getCurrentTheme = () => {
@@ -16,10 +18,16 @@ const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const [showPortfolio, setShowPortfolio] = useState(false);
 
+  // const PortfolioData = PortfolioData.map((item) => {
+  //   const { data, loading, error } = usePalette(item.src);
+  //   return { ...item, colors: data };
+  // });
+
   const toggleTheme = () => {
     localStorage.setItem("darkTheme", !isDarkTheme);
     setIsDarkTheme(!isDarkTheme);
   };
+
   const togglePortfolio = () => {
     setShowPortfolio(!showPortfolio);
   };
@@ -40,6 +48,7 @@ const App = () => {
         toggleTheme={toggleTheme}
         togglePortfolio={togglePortfolio}
         showPortfolio={showPortfolio}
+        PortfolioData={PortfolioData}
       />
     </div>
   );

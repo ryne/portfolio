@@ -28,6 +28,14 @@ const PortfolioData = [
     title: "Vimo Digital",
     description: "Custom WordPress Theme",
     assets: { video: vimo1 },
+    colors: {
+      vibrant: "#0794f7",
+      lightVibrant: "#7ec7fb",
+      darkVibrant: "#04548c",
+      muted: "#045994",
+      lightMuted: "#045994",
+      darkMuted: "#045994",
+    },
   },
   {
     id: 2,
@@ -36,6 +44,14 @@ const PortfolioData = [
     title: "Prevail Legal Marketing",
     description: "Custom WordPress Theme",
     assets: { video: prevail1 },
+    colors: {
+      vibrant: "#25acd9",
+      lightVibrant: "#8dd4eb",
+      darkVibrant: "#145c74",
+      muted: "#166782",
+      lightMuted: "#166782",
+      darkMuted: "#166782",
+    },
   },
   {
     id: 3,
@@ -44,6 +60,14 @@ const PortfolioData = [
     title: "The Modern Groom",
     description: "Custom Vue.js Application",
     assets: { video: tmg1 },
+    colors: {
+      vibrant: "#5188ad",
+      lightVibrant: "#a5c1d4",
+      darkVibrant: "#243c4c",
+      muted: "#315167",
+      lightMuted: "#315167",
+      darkMuted: "#243c54",
+    },
   },
   {
     id: 4,
@@ -52,6 +76,14 @@ const PortfolioData = [
     title: "Haci Mechanical",
     description: "Custom WordPress Theme",
     assets: { video: haci1 },
+    colors: {
+      vibrant: "#9c040c",
+      lightVibrant: "#e0afb2",
+      darkVibrant: "#a41320",
+      muted: "#948c74",
+      lightMuted: "#ecd4d4",
+      darkMuted: "#890f1a",
+    },
   },
   {
     id: 5,
@@ -60,6 +92,14 @@ const PortfolioData = [
     title: "Whittingham Creations",
     description: "Custom Parallax Website",
     assets: { video: wc1 },
+    colors: {
+      vibrant: "#c4da64",
+      lightVibrant: "#acc464",
+      darkVibrant: "#5b6b19",
+      muted: "#7c8c54",
+      lightMuted: "#5d6e2a",
+      darkMuted: "#33343c",
+    },
   },
   {
     id: 6,
@@ -68,6 +108,14 @@ const PortfolioData = [
     title: "Telos Tennis",
     description: "Custom WordPress Theme",
     assets: { video: tt1 },
+    colors: {
+      vibrant: "#6cbc44",
+      lightVibrant: "#6b94be",
+      darkVibrant: "#376122",
+      muted: "#588844",
+      lightMuted: "#2e4c6a",
+      darkMuted: "#444344",
+    },
   },
   {
     id: 7,
@@ -76,6 +124,14 @@ const PortfolioData = [
     title: "Homebridge Financial",
     description: "Custom Landing Page",
     assets: { video: hb1 },
+    colors: {
+      vibrant: "#049cdc",
+      lightVibrant: "#7cd6fc",
+      darkVibrant: "#2484bc",
+      muted: "#4c86a4",
+      lightMuted: "#bcbcc4",
+      darkMuted: "#445462",
+    },
   },
   {
     id: 8,
@@ -85,6 +141,14 @@ const PortfolioData = [
     title: "Shortcut Buddy",
     description: "Custom React Application",
     assets: { video: sb1 },
+    colors: {
+      vibrant: "#5c84f4",
+      lightVibrant: "#82a1f6",
+      darkVibrant: "#08267c",
+      muted: "#949494",
+      lightMuted: "#092c8f",
+      darkMuted: "#092c8f",
+    },
   },
   {
     id: 9,
@@ -94,6 +158,14 @@ const PortfolioData = [
     title: "Better Phasmophobia Journal",
     description: "Custom React Application",
     assets: { video: bpj1 },
+    colors: {
+      vibrant: "#346584",
+      lightVibrant: "#9fc3d9",
+      darkVibrant: "#622f0c",
+      muted: "#9d7c5a",
+      lightMuted: "#c7bcb3",
+      darkMuted: "#315263",
+    },
   },
   {
     id: 10,
@@ -102,6 +174,14 @@ const PortfolioData = [
     title: "CodePen.io",
     description: "CodePen.io Playground Snippets",
     assets: { video: cp1 },
+    colors: {
+      vibrant: "#7f7f7f",
+      lightVibrant: "#bcbcbc",
+      darkVibrant: "#424242",
+      muted: "#7d7d7d",
+      lightMuted: "#a1a1a1",
+      darkMuted: "#383838",
+    },
   },
 ];
 
