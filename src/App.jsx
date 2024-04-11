@@ -38,6 +38,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div
+        style="height: 100vh; width: 100vw;"
         id="app"
         className={clsx("bg-white h-screen w-screen", {
           "dark bg-black": isDarkTheme,
@@ -57,6 +58,7 @@ const App = () => {
 
   return (
     <div
+      style="height: 100vh; width: 100vw;"
       id="app"
       className={clsx("bg-white h-screen w-screen", {
         "dark bg-black": isDarkTheme,
