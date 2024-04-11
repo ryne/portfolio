@@ -68,8 +68,8 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
         ref={refSplide}
       >
         <header className="flex w-full items-center justify-center content-center absolute top-[8px] sm:top-[12px] md:top-[calc(2.5vw_-_16px)] z-10">
-          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic">
+          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
+            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
               Ryne
               <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
                 /
@@ -90,25 +90,28 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               />
             </button>
           </div>
-          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] right-[20px] md:right-[5vw] top-1 sm:top-1 md:top-0 h:[24px] md:h-[32px]">
-            <button
-              onClick={() => togglePortfolio()}
+          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw] top-1 sm:top-1 md:top-0 h:[24px] md:h-[32px]">
+            <a
+              href="https://github.com/ryne/"
+              target="_blank"
               className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
               <FaGithub className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </button>
-            <button
-              onClick={() => togglePortfolio()}
+            </a>
+            <a
+              href="https://codepen.io/ryne"
+              target="_blank"
               className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
               <FaCodepen className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </button>
-            <button
-              onClick={() => togglePortfolio()}
+            </a>
+            <a
+              href="https://twitter.com/256ofryne"
+              target="_blank"
               className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
               <FaXTwitter className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </button>
+            </a>
             <button
               onClick={() => togglePortfolio()}
               className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
