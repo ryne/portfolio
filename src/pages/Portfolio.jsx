@@ -6,7 +6,12 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import PortfolioData from "../data/PortfolioData";
 import { BsChevronDown, BsBoxArrowUpRight } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaCodepen,
+  FaXTwitter,
+  FaUserAstronaut,
+} from "react-icons/fa6";
 import light from "../assets/light.png";
 
 function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
@@ -52,27 +57,27 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
       ref={refPortfolio}
       className={clsx(
         "transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-        { "pointer-events-auto blur-none": showPortfolio },
+        { "pointer-events-auto blur-none": showPortfolio }
       )}
     >
       <div
         className={clsx(
           "pointer-events-none absolute blur opacity-0 bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-          { "pointer-events-auto blur-none": showPortfolio },
+          { "pointer-events-auto blur-none": showPortfolio }
         )}
         ref={refSplide}
       >
-        <header className="flex w-full items-center justify-center absolute top-[8px] md:top-[calc(2.5vw_-_16px)] z-10">
-          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_20px)1] md:w-[calc(50%_-_5vw_-_51px)] left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="md:-mt-[2px] xl:-mt-[4px] text-xl md:text-2xl xl:text-3xl font-light italic">
+        <header className="flex w-full items-center justify-center content-center absolute top-[8px] sm:top-[12px] md:top-[calc(2.5vw_-_16px)] z-10">
+          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
+            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic">
               Ryne
-              <span className="px-0.5 md:px-1 opacity-10 dark:opacity-20">
+              <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
                 /
               </span>
               Not Ryan
             </h1>
           </div>
-          <div className="z-10 flex flex-row justify-center h-[32px] -mt-0.5 lg:-mt-1.5 xl:-mt-2">
+          <div className="z-10 flex flex-row justify-center h-[32px] -mt-0.5 xl:-mt-2">
             <div class="absolute -translate-y-full mt-1 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
             <button
               className="cursor-pointer origin-center active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
@@ -81,16 +86,34 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               <img
                 src={light}
                 alt="Theme Toggle"
-                className="h-[3.5vw] min-h-[25.5px] xl:h-[51px]"
+                className="h-[3.5vw] sm:h-[4.5vw] md:h-[3.5vw] xl:h-[51px] min-h-[25.5px]"
               />
             </button>
           </div>
-          <div className="absolute flex flex-row justify-start w-[calc(50%_-_5vw_-_51px)] right-[5vw] top-0 h:[24px] md:h-[32px]">
+          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] right-[20px] md:right-[5vw] top-1 sm:top-1 md:top-0 h:[24px] md:h-[32px]">
             <button
               onClick={() => togglePortfolio()}
-              className="group flex justify-center items-center w-6 h-6 md:w-8 md:h-8 origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
-              <FaGithub className="text-4xl md:text-5xl" />
+              <FaGithub className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+            </button>
+            <button
+              onClick={() => togglePortfolio()}
+              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+            >
+              <FaCodepen className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+            </button>
+            <button
+              onClick={() => togglePortfolio()}
+              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+            >
+              <FaXTwitter className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+            </button>
+            <button
+              onClick={() => togglePortfolio()}
+              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+            >
+              <FaUserAstronaut className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
             </button>
           </div>
         </header>
@@ -134,7 +157,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               style={{
                 background: `${PortfolioDataMap[0].colors.vibrant}22`,
               }}
-              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[5vw] h-[calc(var(--vh)_*_100)]`}
+              className={`flex flex-col items-start justify-center w-full p-[50px_20px] md:p-[50px_5vw] lg:p-[5vw] h-[calc(var(--vh)_*_100)]`}
             >
               <div className="flex w-full justify-center">
                 <img
@@ -722,7 +745,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
             </div>
           </SplideSlide>
         </Splide>
-        <span className="transition-all w-full h-full border-[40px] md:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
+        <span className="transition-all w-full h-full border-[40px_0] sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
       </div>
     </section>
   );
