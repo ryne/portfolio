@@ -5,10 +5,9 @@ import { usePalette } from "react-palette";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import PortfolioData from "../data/PortfolioData";
-import { CgClose } from "react-icons/cg";
 import { BsChevronDown, BsBoxArrowUpRight } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa6";
 import light from "../assets/light.png";
-import omori from "../assets/favicon.png";
 
 function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
   const refPortfolio = useRef();
@@ -65,7 +64,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
       >
         <header className="flex w-full items-center justify-center absolute top-[8px] md:top-[calc(2.5vw_-_16px)] z-10">
           <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_20px)1] md:w-[calc(50%_-_5vw_-_51px)] left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="md:-mt-[2px] text-2xl md:text-2xl font-light italic">
+            <h1 className="md:-mt-[2px] xl:-mt-[4px] text-xl md:text-2xl xl:text-3xl font-light italic">
               Ryne
               <span className="px-0.5 md:px-1 opacity-10 dark:opacity-20">
                 /
@@ -91,7 +90,7 @@ function Portfolio({ toggleTheme, showPortfolio, togglePortfolio }) {
               onClick={() => togglePortfolio()}
               className="group flex justify-center items-center w-6 h-6 md:w-8 md:h-8 origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
             >
-              <CgClose className="text-4xl md:text-5xl" />
+              <FaGithub className="text-4xl md:text-5xl" />
             </button>
           </div>
         </header>
