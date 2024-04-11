@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import { usePalette } from "react-palette";
 import clsx from "clsx";
 import Hero from "./pages/Hero";
 import Portfolio from "./pages/Portfolio";
 import PortfolioData from "./data/PortfolioData";
 import { ImSpinner9 } from "react-icons/im";
+import light from "./assets/light.png";
 
 const App = () => {
   const getCurrentTheme = () => {
@@ -19,18 +20,6 @@ const App = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
 
   // const PortfolioData = PortfolioData.map((item) => {
   //   const { data, loading, error } = usePalette(item.src);
@@ -47,7 +36,6 @@ const App = () => {
   };
 
   if (isLoading) {
-    // Return a loading indicator while data is loading
     return (
       <div
         id="app"
@@ -58,6 +46,11 @@ const App = () => {
         <span className="flex h-full w-full justify-center items-center">
           <ImSpinner9 className="text-3xl animate-spin text-black dark:text-white" />
         </span>
+        <img
+          className="hidden"
+          src={light}
+          onLoad={() => setIsLoading(false)}
+        />
       </div>
     );
   }
@@ -73,6 +66,7 @@ const App = () => {
         toggleTheme={toggleTheme}
         togglePortfolio={togglePortfolio}
         showPortfolio={showPortfolio}
+        setIsLoading={setIsLoading}
       />
       <Portfolio
         toggleTheme={toggleTheme}

@@ -47,7 +47,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
         "absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
         {
           "pointer-events-none blur": showPortfolio,
-        },
+        }
       )}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
@@ -93,7 +93,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
           <BsChevronDown
             className={clsx(
               "group-hover:opacity-100 absolute text-lg -bottom-9 pointer-events-none opacity-20 transition-all",
-              { "animate-bounce": !showPortfolio },
+              { "animate-bounce": !showPortfolio }
             )}
           />
         </button>
