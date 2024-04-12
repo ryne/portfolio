@@ -40,7 +40,6 @@ const App = () => {
     setTimeout(function () {
       setIsLoading(false);
       const placeholders = document.querySelectorAll(".placeholder");
-      console.log(placeholders);
       placeholders.forEach(function (e) {
         e.classList.remove(
           "placeholder_vh",

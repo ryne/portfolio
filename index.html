@@ -19,6 +19,14 @@
         document
           .querySelector(":root")
           .style.setProperty("--vh", window.innerHeight / 100 + "px");
+        const placeholders = document.querySelectorAll(".placeholder");
+        placeholders.forEach(function (e) {
+          e.classList.remove(
+            "placeholder_vh",
+            "placeholder_vh_vw",
+            "placeholder"
+          );
+        });
       });
     </script>
   </body>
