@@ -60,7 +60,7 @@ const App = () => {
     <div
       style={{ height: "100vh", width: "100vw" }}
       id="app"
-      className={clsx("bg-white h-screen w-screen", {
+      className={clsx("remove_styles bg-white h-screen w-screen", {
         "dark bg-black": isDarkTheme,
       })}
     >
