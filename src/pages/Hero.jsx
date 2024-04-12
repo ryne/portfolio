@@ -5,35 +5,41 @@ import light from "../assets/light.png";
 import { BsFillFileRichtextFill, BsChevronDown } from "react-icons/bs";
 
 function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
+  const refBase = useRef();
   const refLight = useRef();
   const refShadow = useRef();
   const refText = useRef();
   const refPortfolio = useRef();
 
   useEffect(() => {
+    gsap.to(refBase.current, {
+      duration: 0.25,
+      opacity: 1,
+      ease: "power4",
+    });
     gsap.to(refLight.current, {
       y: -112,
-      delay: 0.5,
+      delay: 1,
       duration: 1.5,
       ease: "power4",
     });
     gsap.to(refShadow.current, {
       y: 112,
-      delay: 0.5,
+      delay: 1,
       duration: 1.5,
       transform: "scale(3,1.5)",
       opacity: 0.2,
       ease: "power4",
     });
     gsap.to(refText.current, {
-      delay: 0.7,
+      delay: 1.2,
       duration: 1.5,
       ease: "power1",
       opacity: 1,
     });
     gsap.to(refPortfolio.current, {
       y: -30,
-      delay: 2,
+      delay: 2.5,
       duration: 1,
       opacity: 1,
       pointerEvents: "all",
@@ -43,19 +49,16 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
 
   return (
     <section
-      style={{ height: "100vh", width: "100vw" }}
       className={clsx(
-        "remove_styles absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
+        "opacity-0 placeholder_vh_vw absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
         {
           "pointer-events-none blur": showPortfolio,
         }
       )}
+      ref={refBase}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
-        <div
-          style={{ height: "100vh" }}
-          className="remove_styles absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"
-        ></div>
+        <div className="placeholder_vh absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
         <button
           className="cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
           onClick={() => toggleTheme()}

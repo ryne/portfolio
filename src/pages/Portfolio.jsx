@@ -67,7 +67,7 @@ function Portfolio({
       >
         <header className="flex w-full items-center justify-center content-center absolute top-[8px] sm:top-[12px] md:top-[calc(2.5vw_-_16px)] z-10">
           <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] 2xl:-mt-[5px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
+            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] 2xl:-mt-[6px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
               Ryne
               <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
                 /

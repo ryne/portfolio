@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(!false);
   const [isLoading, setIsLoading] = useState(true);
 
   // const PortfolioData = PortfolioData.map((item) => {
@@ -35,32 +35,36 @@ const App = () => {
     setShowPortfolio(!showPortfolio);
   };
 
+  const startApp = () => {
+    document.querySelector("#spinner").style.opacity = 0;
+    setTimeout(function () {
+      setIsLoading(false);
+    }, 500);
+  };
+
   if (isLoading) {
     return (
       <div
-        style={{ height: "100vh", width: "100vw" }}
         id="app"
-        className={clsx("bg-white h-screen w-screen", {
+        className={clsx("placeholder_vh_vw bg-white h-screen w-screen", {
           "dark bg-black": isDarkTheme,
         })}
       >
         <span className="flex h-full w-full justify-center items-center">
-          <ImSpinner9 className="text-3xl animate-spin text-black/10 dark:text-white/10" />
+          <ImSpinner9
+            id="spinner"
+            className="text-2xl animate-spin text-black dark:text-white transition-all opacity-100 duration-500"
+          />
         </span>
-        <img
-          className="hidden"
-          src={light}
-          onLoad={() => setIsLoading(false)}
-        />
+        <img className="hidden" src={light} onLoad={() => startApp()} />
       </div>
     );
   }
 
   return (
     <div
-      style={{ height: "100vh", width: "100vw" }}
       id="app"
-      className={clsx("remove_styles bg-white h-screen w-screen", {
+      className={clsx("placeholder_vh_vw bg-white h-screen w-screen", {
         "dark bg-black": isDarkTheme,
       })}
     >
