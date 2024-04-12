@@ -65,9 +65,9 @@ function Portfolio({
         )}
         ref={refSplide}
       >
-        <header className="flex w-full items-center justify-center content-center absolute top-[8px] sm:top-[12px] md:top-[calc(2.5vw_-_16px)] z-10">
-          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] top-0 h:[24px] md:h-[32px]">
-            <h1 className="xl:-mr-[1px] -mt-[2px] sm:-mt-[2px] lg:-mt-[4px] xl:-mt-[4px] 2xl:-mt-[6px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
+        <header className="flex w-full items-center justify-center content-center absolute top-0 h-[40px] sm:h-[50px] md:h-[5vw] z-10">
+          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] -mt-0.5 sm:-mt-1 xl:-mt-1.5">
+            <h1 className="xl:-mr-[1px] text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic 2xl:tracking-wide">
               Ryne
               <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
                 /
@@ -75,7 +75,7 @@ function Portfolio({
               Not Ryan
             </h1>
           </div>
-          <div className="z-10 flex flex-row justify-center h-[32px] -mt-0.5 xl:-mt-2">
+          <div className="z-10 flex flex-row justify-center">
             <div className="absolute -translate-y-full mt-1 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
             <button
               className="cursor-pointer origin-center active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
@@ -84,11 +84,11 @@ function Portfolio({
               <img
                 src={light}
                 alt="Theme Toggle"
-                className="h-[3.5vw] sm:h-[4.5vw] md:h-[3.5vw] xl:h-[51px] min-h-[25.5px]"
+                className="h-[32px] sm:h-[36px] md:h-[4vw] xl:h-[51px] min-h-[25.5px]"
               />
             </button>
           </div>
-          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw] top-1 sm:top-1 md:top-0 h:[24px] md:h-[32px]">
+          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
             <a
               href="https://github.com/ryne/"
               target="_blank"
