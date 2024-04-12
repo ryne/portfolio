@@ -52,7 +52,10 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
       )}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
-        <div className="absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
+        <div
+          style={{ height: "100vh" }}
+          className="absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"
+        ></div>
         <button
           className="cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
           onClick={() => toggleTheme()}
