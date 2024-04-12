@@ -45,7 +45,7 @@ const App = () => {
         })}
       >
         <span className="flex h-full w-full justify-center items-center">
-          <ImSpinner9 className="text-3xl animate-spin text-black dark:text-white" />
+          <ImSpinner9 className="text-3xl animate-spin text-black/10 dark:text-white/10" />
         </span>
         <img
           className="hidden"
