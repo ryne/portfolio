@@ -39,6 +39,15 @@ const App = () => {
     document.querySelector("#spinner").style.opacity = 0;
     setTimeout(function () {
       setIsLoading(false);
+      const placeholders = document.querySelectorAll(".placeholder");
+      console.log(placeholders);
+      placeholders.forEach(function (e) {
+        e.classList.remove(
+          "placeholder_vh",
+          "placeholder_vh_vw",
+          "placeholder"
+        );
+      });
     }, 500);
   };
 
@@ -46,9 +55,12 @@ const App = () => {
     return (
       <div
         id="app"
-        className={clsx("placeholder_vh_vw bg-white h-screen w-screen", {
-          "dark bg-black": isDarkTheme,
-        })}
+        className={clsx(
+          "placeholder placeholder_vh_vw bg-white h-screen w-screen",
+          {
+            "dark bg-black": isDarkTheme,
+          }
+        )}
       >
         <span className="flex h-full w-full justify-center items-center">
           <ImSpinner9
@@ -64,9 +76,12 @@ const App = () => {
   return (
     <div
       id="app"
-      className={clsx("placeholder_vh_vw bg-white h-screen w-screen", {
-        "dark bg-black": isDarkTheme,
-      })}
+      className={clsx(
+        "placeholder placeholder_vh_vw bg-white h-screen w-screen",
+        {
+          "dark bg-black": isDarkTheme,
+        }
+      )}
     >
       <Hero
         toggleTheme={toggleTheme}

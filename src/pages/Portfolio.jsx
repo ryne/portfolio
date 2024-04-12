@@ -76,7 +76,7 @@ function Portfolio({
             </h1>
           </div>
           <div className="z-10 flex flex-row justify-center h-[32px] -mt-0.5 xl:-mt-2">
-            <div class="absolute -translate-y-full mt-1 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
+            <div className="absolute -translate-y-full mt-1 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
             <button
               className="cursor-pointer origin-center active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
               onClick={() => toggleTheme()}
