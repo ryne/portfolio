@@ -38,9 +38,9 @@ const App = () => {
   const startApp = () => {
     document.querySelector("#spinner").style.opacity = 0;
     setTimeout(function () {
+      setIsLoading(false);
       let placeholders = document.querySelectorAll(".placeholder");
       placeholders.forEach((i) => i.removeAttribute("style"));
-      setIsLoading(false);
     }, 500);
   };
 

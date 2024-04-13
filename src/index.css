@@ -6,6 +6,9 @@
   .pixelated {
     image-rendering: pixelated;
   }
+  .text-inherit {
+    font-size: inherit;
+  }
   .clippy {
     clip-path: polygon(
       0 0,
