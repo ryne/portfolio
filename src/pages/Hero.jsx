@@ -49,8 +49,9 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
 
   return (
     <section
+      style={{ height: "100vh", width: "100vw" }}
       className={clsx(
-        "opacity-0 placeholder placeholder_vh_vw absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
+        "opacity-0 placeholder absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
         {
           "pointer-events-none blur": showPortfolio,
         }
@@ -58,7 +59,10 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
       ref={refBase}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
-        <div className="placeholder placeholder_vh absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
+        <div
+          style={{ height: "100vh" }}
+          className="placeholder absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"
+        ></div>
         <button
           className="cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
           onClick={() => toggleTheme()}

@@ -7,7 +7,11 @@
     <title>Ryne / Portfolio</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div
+      id="root"
+      class="placeholder"
+      style="height: 100vh; width: 100vw"
+    ></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
       window.addEventListener("resize", () => {
@@ -19,14 +23,8 @@
         document
           .querySelector(":root")
           .style.setProperty("--vh", window.innerHeight / 100 + "px");
-        const placeholders = document.querySelectorAll(".placeholder");
-        placeholders.forEach(function (e) {
-          e.classList.remove(
-            "placeholder_vh",
-            "placeholder_vh_vw",
-            "placeholder"
-          );
-        });
+        let placeholders = document.querySelectorAll(".placeholder");
+        placeholders.forEach((i) => i.removeAttribute("style"));
       });
     </script>
   </body>
