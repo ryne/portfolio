@@ -88,34 +88,36 @@ function Portfolio({
               />
             </button>
           </div>
-          <div className="absolute gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
-            <a
-              href="https://github.com/ryne/"
-              target="_blank"
-              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-            >
-              <FaGithub className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </a>
-            <a
-              href="https://codepen.io/ryne"
-              target="_blank"
-              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-            >
-              <FaCodepen className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </a>
-            <a
-              href="https://twitter.com/256ofryne"
-              target="_blank"
-              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-            >
-              <FaXTwitter className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </a>
-            <button
-              onClick={() => togglePortfolio()}
-              className="group flex justify-center items-center w-auto h-auto origin-center text-3xl active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
-            >
-              <FaUserAstronaut className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
-            </button>
+          <div className="absolute flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
+            <div className="flex group gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9">
+              <a
+                href="https://github.com/ryne/"
+                target="_blank"
+                className="group-hover:opacity-30 hover:!opacity-100  flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+              >
+                <FaGithub className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+              </a>
+              <a
+                href="https://codepen.io/ryne"
+                target="_blank"
+                className="group-hover:opacity-30 hover:!opacity-100  flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+              >
+                <FaCodepen className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+              </a>
+              <a
+                href="https://twitter.com/256ofryne"
+                target="_blank"
+                className="group-hover:opacity-30 hover:!opacity-100  flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+              >
+                <FaXTwitter className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+              </a>
+              <button
+                onClick={() => togglePortfolio()}
+                className="group-hover:opacity-30 hover:!opacity-100 flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+              >
+                <FaUserAstronaut className="text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[32px]" />
+              </button>
+            </div>
           </div>
         </header>
         <Splide
