@@ -35,18 +35,33 @@ function Portfolio({
         duration: 0.55,
         ease: "power1",
       });
-    } else {
-      gsap.to(refPortfolio.current, {
-        opacity: 0,
-        delay: 0.25,
-        duration: 0.5,
-        ease: "power1",
-      });
-      gsap.to(refSplide.current, {
-        opacity: 0,
-        duration: 0.5,
-        ease: "power1",
-      });
+      // Check if a GPU is being utilized for hardware acceleration. Apply optimizations if necessary.
+      setTimeout(function () {
+        let canvas = document.createElement("canvas");
+        let gl;
+        let debugInfo;
+        let vendor;
+
+        try {
+          gl =
+            canvas.getContext("webgl") ||
+            canvas.getContext("experimental-webgl");
+        } catch (e) {}
+
+        if (gl) {
+          debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+          vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+          if (vendor === "Google Inc. (Google)") {
+            // Remove GPU-intensive elements.
+            document.getElementById("gpu_accel_only").remove();
+            document
+              .querySelectorAll(".blur, .blur-none")
+              .forEach(function (i) {
+                i.classList.remove("blur", "blur-none");
+              });
+          }
+        }
+      }, 450);
     }
   }, [showPortfolio]);
 
@@ -54,7 +69,7 @@ function Portfolio({
     <section
       ref={refPortfolio}
       className={clsx(
-        "transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
+        "z-10 transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
         { "pointer-events-auto blur-none": showPortfolio }
       )}
     >
@@ -698,7 +713,10 @@ function Portfolio({
             </div>
           </SplideSlide>
         </Splide>
-        <span className="transition-all w-full h-full border-[40px_0] sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"></span>
+        <span
+          id="gpu_accel_only"
+          className="transition-all w-full h-full border-[40px_0] sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"
+        ></span>
       </div>
     </section>
   );
