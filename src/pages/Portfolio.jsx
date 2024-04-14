@@ -717,6 +717,10 @@ function Portfolio({
           id="gpu_accel_only"
           className="transition-all w-full h-full border-[40px_0] sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"
         ></span>
+        <span
+          id="cpu_accel_only"
+          className="pointer-events-none z-0 absolute"
+        ></span>
       </div>
     </section>
   );
