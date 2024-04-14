@@ -112,7 +112,7 @@ function Portfolio({
                 <FaXTwitter />
               </a>
               <button
-                onClick={() => togglePortfolio()}
+                onClick={() => console.log("Bio/Resume Goes Here :)")}
                 className="text-inherit group-hover:opacity-30 hover:!opacity-100 flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
               >
                 <FaUserAstronaut />

@@ -32,7 +32,10 @@ const App = () => {
   };
 
   const togglePortfolio = () => {
-    setShowPortfolio(!showPortfolio);
+    setShowPortfolio(true);
+    setTimeout(function () {
+      document.getElementById("hero").remove();
+    }, 1000);
   };
 
   const startApp = () => {

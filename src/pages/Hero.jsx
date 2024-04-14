@@ -49,6 +49,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
 
   return (
     <section
+      id="hero"
       style={{ height: "100vh", width: "100vw" }}
       className={clsx(
         "opacity-0 placeholder absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
