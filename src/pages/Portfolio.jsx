@@ -59,6 +59,8 @@ function Portfolio({
               .forEach(function (i) {
                 i.classList.remove("blur", "blur-none");
               });
+          } else {
+            document.getElementById("cpu_accel_only").remove();
           }
         }
       }, 450);
@@ -719,7 +721,7 @@ function Portfolio({
         ></span>
         <span
           id="cpu_accel_only"
-          className="pointer-events-none z-0 absolute"
+          className="absolute w-full h-full top-0 pointer-events-none z-0 dark:shadow-[0_0_40px_#000_inset] shadow-[0_0_40px_#FFF_inset] md:dark:shadow-[0_0_5vw_#000_inset] md:shadow-[0_0_5vw_#FFF_inset]"
         ></span>
       </div>
     </section>
