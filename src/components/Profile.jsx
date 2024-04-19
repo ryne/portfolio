@@ -5,9 +5,11 @@ import cat from "../assets/omori_cat.gif";
 
 const Profile = ({ toggleProfile, showProfile }) => {
   return (
-    <div className="flex items-center justify-center absolute top-0 left-0 w-screen h-screen">
+    <div
+      className={`${showProfile ? "z-1 pointer-events-all" : "-z-1 pointer-events-none"} flex items-center justify-center absolute top-0 left-0 w-screen h-screen duration-500`}
+    >
       <div
-        className={`${showProfile ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"} z-[52] rounded-3xl overflow-hidden shadow-xl max-w-sm m-3 dark:bg-black/70 dark:text-white bg-white text-black transition-all duration-500`}
+        className={`${showProfile ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"} z-[52] rounded-3xl overflow-hidden shadow-xl max-w-sm m-3 dark:bg-black/70 dark:text-white bg-white text-black transition-all duration-500`}
       >
         <img src={bg} className="w-full" />
         <div className="flex justify-center -mt-8">
@@ -32,7 +34,7 @@ const Profile = ({ toggleProfile, showProfile }) => {
         onClick={() => {
           toggleProfile();
         }}
-        className={`${showProfile ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"} absolute w-screen h-screen bg-white/40 dark:bg-black/40 backdrop-blur transition-all duration-500 top-0 left-0 z-[51]`}
+        className={`${showProfile ? "opacity-100" : "opacity-0"} absolute w-screen h-screen bg-white/40 dark:bg-black/40 backdrop-blur transition-all duration-500 top-0 left-0 z-[51]`}
       ></div>
     </div>
   );
