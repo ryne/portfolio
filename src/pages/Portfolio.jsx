@@ -18,6 +18,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
   const refSplide = useRef();
 
   const [showProfile, setShowProfile] = useState(false);
+  const [cpuOnly, setCpuOnly] = useState(false);
 
   const toggleProfile = () => {
     setShowProfile(!showProfile);
@@ -55,11 +56,12 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
           vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
           if (vendor === "Google Inc. (Google)") {
             // Remove GPU-intensive elements.
+            setCpuOnly(true);
             document.getElementById("gpu_accel_only").remove();
             document
-              .querySelectorAll(".blur, .blur-none")
+              .querySelectorAll(".blur, .blur-none, .backdrop-blur")
               .forEach(function (i) {
-                i.classList.remove("blur", "blur-none");
+                i.classList.remove("blur", "blur-none", "backdrop-blur");
               });
           } else {
             document.getElementById("cpu_accel_only").remove();
@@ -69,12 +71,6 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
     }
   }, [showPortfolio]);
 
-  useEffect(() => {
-    if (showProfile === true) {
-      console.log("Yes");
-    }
-  }, [showProfile]);
-
   return (
     <section
       ref={refPortfolio}
@@ -83,7 +79,11 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         { "pointer-events-auto blur-none": showPortfolio },
       )}
     >
-      <Profile toggleProfile={toggleProfile} showProfile={showProfile} />
+      <Profile
+        toggleProfile={toggleProfile}
+        showProfile={showProfile}
+        cpuOnly={cpuOnly}
+      />
       <div
         className={clsx(
           "pointer-events-none absolute blur opacity-0 bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
@@ -92,7 +92,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         ref={refSplide}
       >
         <header className="flex w-full items-center justify-center content-center absolute top-0 h-[40px] sm:h-[50px] md:h-[5vw] z-10">
-          <div className="absolute flex flex-row justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] sm:-mt-1 xl:-mt-1.5">
+          <div className="absolute flex flex-row justify-start sm:justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] sm:-mt-1 xl:-mt-1.5">
             <h1 className="xl:-mr-[1px] text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic">
               Ryne
               <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
@@ -114,7 +114,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
               />
             </button>
           </div>
-          <div className="absolute flex flex-row justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
+          <div className="absolute flex flex-row justify-end sm:justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
             <div className="flex group gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 text-xl sm:text-2xl md:text-2xl lg:text-3xl 2xl:text-[32px]">
               <a
                 href="https://github.com/ryne/"

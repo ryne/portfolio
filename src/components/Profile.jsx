@@ -1,10 +1,10 @@
-import React from "react";
+import { React } from "react";
 import avatar from "../assets/ryne.jpg";
 import bg from "../assets/bg.png";
 import cat from "../assets/omori_cat.gif";
 import { IoClose } from "react-icons/io5";
 
-const Profile = ({ toggleProfile, showProfile }) => {
+const Profile = ({ toggleProfile, showProfile, cpuOnly }) => {
   return (
     <div
       className={`${showProfile ? "z-1 pointer-events-all" : "-z-1 pointer-events-none"} flex items-center justify-center absolute top-0 left-0 w-screen h-screen duration-500`}
@@ -43,7 +43,7 @@ const Profile = ({ toggleProfile, showProfile }) => {
         onClick={() => {
           toggleProfile();
         }}
-        className={`${showProfile ? "opacity-100" : "opacity-0"} absolute w-screen h-screen bg-white/40 dark:bg-black/40 backdrop-blur transition-all duration-500 top-0 left-0 z-[51]`}
+        className={`${showProfile ? "opacity-100" : "opacity-0"} ${cpuOnly ? "bg-white/90 dark:bg-black/90" : "backdrop-blur bg-white/70 dark:bg-black/70"} absolute w-screen h-screen transition-all duration-500 top-0 left-0 z-[51]`}
       ></div>
     </div>
   );
