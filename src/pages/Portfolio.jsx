@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import { gsap } from "gsap";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -11,15 +11,17 @@ import {
   FaUserAstronaut,
 } from "react-icons/fa6";
 import light from "../assets/light.png";
+import Profile from "../components/Profile";
 
-function Portfolio({
-  toggleTheme,
-  showPortfolio,
-  togglePortfolio,
-  PortfolioData,
-}) {
+function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
   const refPortfolio = useRef();
   const refSplide = useRef();
+
+  const [showProfile, setShowProfile] = useState(false);
+
+  const toggleProfile = () => {
+    setShowProfile(!showProfile);
+  };
 
   useEffect(() => {
     if (showPortfolio === true) {
@@ -67,18 +69,25 @@ function Portfolio({
     }
   }, [showPortfolio]);
 
+  useEffect(() => {
+    if (showProfile === true) {
+      console.log("Yes");
+    }
+  }, [showProfile]);
+
   return (
     <section
       ref={refPortfolio}
       className={clsx(
         "z-10 transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-        { "pointer-events-auto blur-none": showPortfolio }
+        { "pointer-events-auto blur-none": showPortfolio },
       )}
     >
+      <Profile toggleProfile={toggleProfile} showProfile={showProfile} />
       <div
         className={clsx(
           "pointer-events-none absolute blur opacity-0 bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-          { "pointer-events-auto blur-none": showPortfolio }
+          { "pointer-events-auto blur-none": showPortfolio },
         )}
         ref={refSplide}
       >
@@ -129,7 +138,7 @@ function Portfolio({
                 <FaXTwitter />
               </a>
               <button
-                onClick={() => console.log("Bio/Resume Goes Here :)")}
+                onClick={() => toggleProfile()}
                 className="text-inherit group-hover:opacity-30 hover:!opacity-100 flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
               >
                 <FaUserAstronaut />

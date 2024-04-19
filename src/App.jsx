@@ -83,7 +83,6 @@ const App = () => {
       />
       <Portfolio
         toggleTheme={toggleTheme}
-        togglePortfolio={togglePortfolio}
         showPortfolio={showPortfolio}
         PortfolioData={PortfolioData}
       />
