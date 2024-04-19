@@ -16,7 +16,7 @@ const Profile = ({ toggleProfile, showProfile, cpuOnly }) => {
           onClick={() => {
             toggleProfile();
           }}
-          className="hover:bg-red-500 hover:saturate-150 absolute p-1 cursor-pointer right-4 shadow-lg top-4 z-50 text-white bg-red-500 rounded-full text-xl transition-all"
+          className="hover:bg-red-500/100 active:scale-90 origin-center hover:saturate-150 absolute p-1 cursor-pointer right-4 shadow-lg top-4 z-50 text-white bg-red-500/80 rounded-full text-xl transition-all"
         >
           <IoClose />
         </button>
