@@ -76,7 +76,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       ref={refPortfolio}
       className={clsx(
         "z-10 transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-        { "pointer-events-auto blur-none": showPortfolio },
+        { "pointer-events-auto blur-none": showPortfolio }
       )}
     >
       <Profile
@@ -87,7 +87,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       <div
         className={clsx(
           "pointer-events-none absolute blur opacity-0 bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
-          { "pointer-events-auto blur-none": showPortfolio },
+          { "pointer-events-auto blur-none": showPortfolio }
         )}
         ref={refSplide}
       >
