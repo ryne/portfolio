@@ -23,7 +23,7 @@ const Profile = ({ toggleProfile, showProfile, cpuOnly }) => {
         <img src={bg} className="w-full rounded-t-3xl" />
         <div className="flex justify-center -mt-8">
           <img
-            className="w-24 rounded-full border-solid border-white dark:border-black border-2 -mt-3"
+            className="hover:animate-spin w-24 rounded-full border-solid border-white dark:border-black border-2 -mt-3"
             src={avatar}
           />
         </div>
