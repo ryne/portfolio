@@ -17,7 +17,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
   const refPortfolio = useRef();
   const refSplide = useRef();
 
-  const [showProfile, setShowProfile] = useState(true);
+  const [showProfile, setShowProfile] = useState(false);
 
   const toggleProfile = () => {
     setShowProfile(!showProfile);
