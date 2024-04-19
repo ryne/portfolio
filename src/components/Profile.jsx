@@ -10,7 +10,7 @@ const Profile = ({ toggleProfile, showProfile, cpuOnly }) => {
       className={`${showProfile ? "z-1 pointer-events-all" : "-z-1 pointer-events-none"} flex items-center justify-center absolute top-0 left-0 w-screen h-screen duration-500`}
     >
       <div
-        className={`${showProfile ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"} z-[52] rounded-3xl shadow-xl dark:shadow-gray-900 max-w-sm m-3 dark:bg-black/95 dark:text-white bg-white/95 text-black transition-all duration-500`}
+        className={`${showProfile ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"} z-[52] rounded-3xl shadow-xl dark:shadow-indigo-900/40 max-w-sm m-3 dark:bg-black/95 dark:text-white bg-white/95 text-black transition-all duration-500`}
       >
         <button
           onClick={() => {
