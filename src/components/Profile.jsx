@@ -43,7 +43,7 @@ const Profile = ({ toggleProfile, showProfile, cpuOnly }) => {
         onClick={() => {
           toggleProfile();
         }}
-        className={`${showProfile ? "opacity-100" : "opacity-0"} ${cpuOnly ? "bg-white/90 dark:bg-black/90" : "backdrop-blur bg-white/70 dark:bg-black/70"} absolute w-screen h-screen transition-all duration-500 top-0 left-0 z-[51]`}
+        className={`${showProfile ? "opacity-100" : "opacity-0"} ${cpuOnly ? "bg-gray-50/90 dark:bg-black/90" : "backdrop-blur bg-gray-50/70 dark:bg-black/70"} absolute w-screen h-screen transition-all duration-500 top-0 left-0 z-[51]`}
       ></div>
     </div>
   );
