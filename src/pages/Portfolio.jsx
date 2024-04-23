@@ -75,7 +75,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       ref={refPortfolio}
       className={clsx(
         "transition-[filter, color, background] pointer-events-none absolute bottom-0 z-10 flex h-screen w-screen origin-bottom flex-row items-center justify-center overflow-hidden bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
-        { "pointer-events-auto blur-none": showPortfolio },
+        { "pointer-events-auto blur-none": showPortfolio }
       )}
     >
       <Profile
@@ -89,7 +89,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       <div
         className={clsx(
           "pointer-events-none absolute flex-row bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
-          { "pointer-events-auto blur-none": showPortfolio },
+          { "pointer-events-auto blur-none": showPortfolio }
         )}
         ref={refSplide}
       >
@@ -120,6 +120,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
             <div className="group flex gap-4 text-xl sm:gap-4 sm:text-2xl md:gap-5 md:text-2xl lg:gap-6 lg:text-3xl xl:gap-8 2xl:gap-9 2xl:text-[32px]">
               <a
                 href="https://github.com/ryne/"
+                title="Ryne on Github"
                 target="_blank"
                 className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
@@ -127,6 +128,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
               </a>
               <a
                 href="https://codepen.io/ryne"
+                title="Ryne on CodePen"
                 target="_blank"
                 className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
@@ -134,6 +136,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
               </a>
               <a
                 href="https://twitter.com/256ofryne"
+                title="Ryne on X (Twitter)"
                 target="_blank"
                 className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
@@ -141,6 +144,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
               </a>
               <button
                 onClick={() => toggleProfile()}
+                title="Ryne's Profile"
                 className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
                 <FaUserAstronaut />

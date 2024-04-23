@@ -40,30 +40,35 @@ const Profile = ({
         </div>
         <div className="px-4 pb-6 pt-2 text-center">
           <h3 className="bold">Ryne Pittman</h3>
-          <div className="my-2 flex w-full flex-row justify-center gap-2">
-            <a
-              href="https://github.com/ryne/"
-              target="_blank"
-              className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://codepen.io/ryne"
-              target="_blank"
-              className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
-            >
-              <FaCodepen />
-            </a>
-            <a
-              href="https://twitter.com/256ofryne"
-              target="_blank"
-              className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
-            >
-              <FaXTwitter />
-            </a>
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group my-2 gap-2">
+              <a
+                href="https://github.com/ryne/"
+                title="Ryne on Github"
+                target="_blank"
+                className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://codepen.io/ryne"
+                title="Ryne on CodePen"
+                target="_blank"
+                className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
+              >
+                <FaCodepen />
+              </a>
+              <a
+                href="https://twitter.com/256ofryne"
+                title="Ryne on X (Twitter)"
+                target="_blank"
+                className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
+              >
+                <FaXTwitter />
+              </a>
+            </div>
           </div>
-          <p className="mt-2 text-sm font-light opacity-70 sm:text-base">
+          <p className="text-sm font-light opacity-70 sm:text-base">
             Traverser of technologies with focus on front-end web development
             &amp; design. Building (breaking) all the things since 1989. Let's
             grow together.
