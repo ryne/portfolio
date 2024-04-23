@@ -39,7 +39,7 @@ const Profile = ({
           />
         </div>
         <div className="px-4 pb-6 pt-2 text-center">
-          <h3 className="bold">Ryne Pittman</h3>
+          <h3 className="font-bold">Ryne Pittman</h3>
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group my-2 gap-2">
               <a
