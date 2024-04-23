@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(!false);
   const [isLoading, setIsLoading] = useState(true);
 
   // const PortfolioData = PortfolioData.map((item) => {
@@ -52,14 +52,14 @@ const App = () => {
       <div
         id="app"
         style={{ height: "100vh", width: "100vw" }}
-        className={clsx("placeholder bg-white h-screen w-screen", {
+        className={clsx("placeholder h-screen w-screen bg-white", {
           "dark bg-black": isDarkTheme,
         })}
       >
-        <span className="flex h-full w-full justify-center items-center">
+        <span className="flex h-full w-full items-center justify-center">
           <ImSpinner9
             id="spinner"
-            className="text-2xl animate-spin text-black dark:text-white transition-all opacity-100 duration-500"
+            className="animate-spin text-2xl text-black opacity-100 transition-all duration-500 dark:text-white"
           />
         </span>
         <img className="hidden" src={light} onLoad={() => startApp()} />
@@ -71,7 +71,7 @@ const App = () => {
     <div
       id="app"
       style={{ height: "100vh", width: "100vw" }}
-      className={clsx("placeholder bg-white h-screen w-screen", {
+      className={clsx("placeholder h-screen w-screen bg-white", {
         "dark bg-black": isDarkTheme,
       })}
     >

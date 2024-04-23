@@ -16,7 +16,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
   const refPortfolio = useRef();
   const refSplide = useRef();
 
-  const [showProfile, setShowProfile] = useState(false);
+  const [showProfile, setShowProfile] = useState(!false);
   const [cpuOnly, setCpuOnly] = useState(false);
 
   const toggleProfile = () => {
@@ -74,7 +74,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
     <section
       ref={refPortfolio}
       className={clsx(
-        "z-10 transition-[filter, color, background] overflow-hidden absolute flex pointer-events-none blur opacity-0 origin-bottom w-screen h-screen bottom-0 justify-center items-center bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
+        "transition-[filter, color, background] pointer-events-none absolute bottom-0 z-10 flex h-screen w-screen origin-bottom flex-row items-center justify-center overflow-hidden bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
         { "pointer-events-auto blur-none": showPortfolio }
       )}
     >
@@ -82,63 +82,66 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         toggleProfile={toggleProfile}
         showProfile={showProfile}
         cpuOnly={cpuOnly}
+        FaGithub={FaGithub}
+        FaCodepen={FaCodepen}
+        FaXTwitter={FaXTwitter}
       />
       <div
         className={clsx(
-          "pointer-events-none absolute blur opacity-0 bg-white text-black flex-row selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter] duration-300 ease-in",
+          "pointer-events-none absolute flex-row bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
           { "pointer-events-auto blur-none": showPortfolio }
         )}
         ref={refSplide}
       >
-        <header className="flex w-full items-center justify-center content-center absolute top-0 h-[40px] sm:h-[50px] md:h-[5vw] z-10">
-          <div className="absolute flex flex-row justify-start sm:justify-end items-center w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] left-[20px] md:left-[5vw] sm:-mt-1 xl:-mt-1.5">
-            <h1 className="xl:-mr-[1px] text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-light italic">
+        <header className="absolute top-0 z-10 flex h-[40px] w-full content-center items-center justify-center sm:h-[50px] md:h-[5vw]">
+          <div className="absolute left-[20px] flex w-[calc(50%_-_51px)] flex-row items-center justify-start sm:justify-end md:left-[5vw] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)]">
+            <h1 className="text-xl font-light italic sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Ryne
-              <span className="px-0.5 md:px-1 lg:px-1.5 xl:px-2 opacity-10 dark:opacity-20">
+              <span className="px-0.5 opacity-10 dark:opacity-20 md:px-1 lg:px-1.5 xl:px-2">
                 /
               </span>
               Not Ryan
             </h1>
           </div>
           <div className="z-10 flex flex-row justify-center">
-            <div className="absolute -translate-y-full mt-1 opacity-10 bg-black w-[1px] h-screen dark:bg-white"></div>
+            <div className="absolute mt-1 h-screen w-[1px] -translate-y-full bg-black opacity-10 dark:bg-white"></div>
             <button
-              className="cursor-pointer origin-center active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
+              className="origin-center cursor-pointer transition-opacity ease-in selection:bg-transparent active:scale-95 active:opacity-50 dark:invert dark:selection:bg-transparent"
               onClick={() => toggleTheme()}
             >
               <img
                 src={light}
                 alt="Theme Toggle"
-                className="h-[32px] sm:h-[36px] md:h-[4vw] xl:h-[51px] min-h-[25.5px]"
+                className="h-[32px] min-h-[25.5px] sm:h-[36px] md:h-[4vw] xl:h-[51px]"
               />
             </button>
           </div>
-          <div className="absolute flex flex-row justify-end sm:justify-start w-[calc(50%_-_51px)] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)] right-[20px] md:right-[5vw]">
-            <div className="flex group gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-9 text-xl sm:text-2xl md:text-2xl lg:text-3xl 2xl:text-[32px]">
+          <div className="absolute right-[20px] flex w-[calc(50%_-_51px)] flex-row justify-end sm:justify-start md:right-[5vw] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)]">
+            <div className="group flex gap-4 text-xl sm:gap-4 sm:text-2xl md:gap-5 md:text-2xl lg:gap-6 lg:text-3xl xl:gap-8 2xl:gap-9 2xl:text-[32px]">
               <a
                 href="https://github.com/ryne/"
                 target="_blank"
-                className="text-inherit group-hover:opacity-30 hover:!opacity-100 flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+                className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
                 <FaGithub />
               </a>
               <a
                 href="https://codepen.io/ryne"
                 target="_blank"
-                className="text-inherit group-hover:opacity-30 hover:!opacity-100  flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+                className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
                 <FaCodepen />
               </a>
               <a
                 href="https://twitter.com/256ofryne"
                 target="_blank"
-                className="text-inherit group-hover:opacity-30 hover:!opacity-100  flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+                className="flex h-auto w-auto  origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
                 <FaXTwitter />
               </a>
               <button
                 onClick={() => toggleProfile()}
-                className="text-inherit group-hover:opacity-30 hover:!opacity-100 flex justify-center items-center w-auto h-auto origin-center text-3xl active:!opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white"
+                className="flex h-auto w-auto origin-center items-center justify-center text-3xl text-inherit transition-opacity ease-in selection:bg-transparent hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30 dark:text-white dark:selection:bg-transparent"
               >
                 <FaUserAstronaut />
               </button>
@@ -148,11 +151,11 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         <Slides PortfolioData={PortfolioData} />
         <span
           id="gpu_accel_only"
-          className="transition-all w-full h-full border-[40px_0] sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw] bg-transparent border-white/70 dark:border-black/70 backdrop-blur-lg fixed inset-0 backdrop-saturate-150 clippy"
+          className="clippy fixed inset-0 h-full w-full border-[40px_0] border-white/70 bg-transparent backdrop-blur-lg backdrop-saturate-150 transition-all dark:border-black/70 sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw]"
         ></span>
         <span
           id="cpu_accel_only"
-          className="absolute w-full h-full top-0 pointer-events-none z-0 dark:shadow-[0_0_40px_#000_inset] shadow-[0_0_40px_#FFF_inset] md:dark:shadow-[0_0_5vw_#000_inset] md:shadow-[0_0_5vw_#FFF_inset]"
+          className="pointer-events-none absolute top-0 z-0 h-full w-full shadow-[0_0_40px_#FFF_inset] dark:shadow-[0_0_40px_#000_inset] md:shadow-[0_0_5vw_#FFF_inset] md:dark:shadow-[0_0_5vw_#000_inset]"
         ></span>
       </div>
     </section>
