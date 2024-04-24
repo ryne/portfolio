@@ -72,10 +72,12 @@ body {
   transform: scale(1);
 }
 
-.overflow-y-auto,
+.overflow-y-auto {
+  scrollbar-width: none;
+}
+
 .overflow-y-auto::-webkit-scrollbar {
   display: none;
-  scrollbar-width: none;
 }
 
 @media (min-width: 767px) {
