@@ -10,15 +10,11 @@ When the pieces come together and stick, we must share them. My personal develop
 
 Summon our dev environment:
 
-`
-yarn dev
-`
+`yarn dev`
 
 Build for production:
 
-`
-yarn build
-`
+`yarn build`
 
 ## Thanks:
 
