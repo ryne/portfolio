@@ -1,6 +1,16 @@
 import { React } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Tooltip } from "react-tooltip";
 import { BsChevronDown, BsBoxArrowUpRight } from "react-icons/bs";
+import {
+  SiTailwindcss,
+  SiWordpress,
+  SiHtml5,
+  SiPhp,
+  SiCss3,
+  SiJavascript,
+  SiJquery,
+} from "react-icons/si";
 
 const Slides = ({ PortfolioData }) => {
   return (
@@ -37,6 +47,7 @@ const Slides = ({ PortfolioData }) => {
         },
       }}
     >
+      <Tooltip id="tooltip" />
       <SplideSlide className="overflow-y-auto">
         <div
           style={{
@@ -50,7 +61,46 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[0].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-9 gap-2">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiTailwindcss
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Tailwind"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiJquery
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="jQuery"
+              />
+              <SiWordpress
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="WordPress"
+              />
+              <SiPhp
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="PHP"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[0].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -102,7 +152,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[1].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[1].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -154,7 +204,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[2].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[2].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -206,7 +256,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[3].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[3].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -258,7 +308,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[4].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[4].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -310,7 +360,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[5].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[5].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -362,7 +412,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[6].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[6].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -414,7 +464,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[7].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[7].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -477,7 +527,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[8].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[8].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -540,7 +590,7 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[9].src}
             />
           </div>
-          <div className="mt-9 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:mt-12 md:text-base md:tracking-[.4em]">
+          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[9].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
