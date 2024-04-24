@@ -120,7 +120,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[0].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -226,7 +226,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[1].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -312,7 +312,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[2].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -403,7 +403,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[3].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -484,7 +484,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[4].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -585,7 +585,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[5].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -661,7 +661,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[6].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -742,7 +742,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[7].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -839,7 +839,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[8].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -946,7 +946,7 @@ const Slides = ({ PortfolioData }) => {
               />
             </div>
           </div>
-          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em] md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[9].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
