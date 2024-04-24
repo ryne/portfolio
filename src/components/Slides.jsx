@@ -10,6 +10,13 @@ import {
   SiCss3,
   SiJavascript,
   SiJquery,
+  SiInvision,
+  SiAdobephotoshop,
+  SiSass,
+  SiVuedotjs,
+  SiAdobeillustrator,
+  SiReact,
+  SiAbletonlive,
 } from "react-icons/si";
 
 const Slides = ({ PortfolioData }) => {
@@ -47,7 +54,10 @@ const Slides = ({ PortfolioData }) => {
         },
       }}
     >
-      <Tooltip id="tooltip" />
+      <Tooltip
+        id="tooltip"
+        className="z-[1000] !bg-black !text-white !opacity-90 dark:!bg-white dark:!text-black"
+      />
       <SplideSlide className="overflow-y-auto">
         <div
           style={{
@@ -62,7 +72,7 @@ const Slides = ({ PortfolioData }) => {
             />
           </div>
           <div className="flex w-full flex-row justify-center">
-            <div className="flex flex-row group mt-9 gap-2">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
                 className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
                 data-tooltip-id="tooltip"
@@ -73,15 +83,15 @@ const Slides = ({ PortfolioData }) => {
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
-              <SiTailwindcss
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
-                data-tooltip-id="tooltip"
-                data-tooltip-content="Tailwind"
-              />
               <SiJavascript
                 className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
+              />
+              <SiTailwindcss
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Tailwind"
               />
               <SiJquery
                 className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
@@ -97,6 +107,16 @@ const Slides = ({ PortfolioData }) => {
                 className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="PHP"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+              <SiInvision
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="InVision"
               />
             </div>
           </div>
@@ -152,7 +172,61 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[1].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiTailwindcss
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Tailwind"
+              />
+              <SiSass
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Sass"
+              />
+              <SiJquery
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="jQuery"
+              />
+              <SiWordpress
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="WordPress"
+              />
+              <SiPhp
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="PHP"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+              <SiInvision
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="InVision"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[1].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -204,7 +278,41 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[2].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiVuedotjs
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Vue.js"
+              />
+              <SiSass
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Sass"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[2].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -256,7 +364,46 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[3].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiJquery
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="jQuery"
+              />
+              <SiWordpress
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="WordPress"
+              />
+              <SiPhp
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="PHP"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[3].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -308,7 +455,36 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[4].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+              <SiAdobeillustrator
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Illustrator"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[4].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -360,7 +536,56 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[5].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiSass
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Sass"
+              />
+              <SiJquery
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="jQuery"
+              />
+              <SiWordpress
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="WordPress"
+              />
+              <SiPhp
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="PHP"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+              <SiInvision
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="InVision"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[5].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -412,7 +637,31 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[6].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[6].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -464,7 +713,36 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[7].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiReact
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="React"
+              />
+              <SiTailwindcss
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Tailwind"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[7].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -527,7 +805,41 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[8].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiReact
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="React"
+              />
+              <SiSass
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Sass"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[8].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
@@ -590,7 +902,51 @@ const Slides = ({ PortfolioData }) => {
               src={PortfolioData[9].src}
             />
           </div>
-          <div className="mt-6 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
+          <div className="flex w-full flex-row justify-center">
+            <div className="flex flex-row group mt-12 gap-2 cursor-default">
+              <SiHtml5
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="HTML5"
+              />
+              <SiCss3
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="CSS3"
+              />
+              <SiJavascript
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Javascript"
+              />
+              <SiSass
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Sass"
+              />
+              <SiJquery
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="jQuery"
+              />
+              <SiAdobephotoshop
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Photoshop"
+              />
+              <SiAdobeillustrator
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Illustrator"
+              />
+              <SiAbletonlive
+                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                data-tooltip-id="tooltip"
+                data-tooltip-content="Ableton Live"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex w-full flex-col justify-center text-center text-sm uppercase tracking-[.3em]md:text-base md:tracking-[.4em]">
             <p className="block w-full">{PortfolioData[9].description}</p>
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
