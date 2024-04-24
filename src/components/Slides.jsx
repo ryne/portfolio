@@ -23,7 +23,13 @@ const Slides = ({ PortfolioData }) => {
   return (
     <Splide
       onActive={(splide, prev, next) => {
-        prev.slide.querySelectorAll("video").forEach((video) => video.play());
+        prev.slide.querySelectorAll("video").forEach((video) => {
+          video
+            .querySelector("source")
+            .setAttribute("src", PortfolioData[prev.index].assets.video);
+          video.load();
+          video.play();
+        });
       }}
       onHidden={(splide, prev, next) => {
         prev.slide.scrollTop = 0;
@@ -265,7 +271,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[1].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -353,7 +359,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[2].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -446,7 +452,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[3].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -529,7 +535,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[4].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -632,7 +638,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[5].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -710,7 +716,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[6].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -804,7 +810,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[7].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -903,7 +909,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[8].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
@@ -1001,7 +1007,7 @@ const Slides = ({ PortfolioData }) => {
               e.target.paused ? e.target.play() : e.target.pause()
             }
           >
-            <source src={PortfolioData[9].assets.video} type="video/mp4" />
+            <source src={PortfolioData[0].assets.video} type="video/mp4" />
           </video>
         </div>
       </SplideSlide>
