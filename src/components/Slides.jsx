@@ -24,10 +24,17 @@ const Slides = ({ PortfolioData }) => {
     <Splide
       onActive={(splide, prev, next) => {
         prev.slide.querySelectorAll("video").forEach((video) => {
-          video
-            .querySelector("source")
-            .setAttribute("src", PortfolioData[prev.index].assets.video);
-          video.load();
+          let videoSource = video.querySelector("source");
+          if (
+            videoSource.getAttribute("src") !==
+            PortfolioData[prev.index].assets.video
+          ) {
+            videoSource.setAttribute(
+              "src",
+              PortfolioData[prev.index].assets.video
+            );
+            video.load();
+          }
           video.play();
         });
       }}
