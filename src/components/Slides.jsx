@@ -87,47 +87,47 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiTailwindcss
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Tailwind"
               />
               <SiJquery
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="jQuery"
               />
               <SiWordpress
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="WordPress"
               />
               <SiPhp
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="PHP"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
               <SiInvision
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="InVision"
               />
@@ -190,52 +190,52 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiTailwindcss
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Tailwind"
               />
               <SiSass
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Sass"
               />
               <SiJquery
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="jQuery"
               />
               <SiWordpress
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="WordPress"
               />
               <SiPhp
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="PHP"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
               <SiInvision
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="InVision"
               />
@@ -298,32 +298,32 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiVuedotjs
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Vue.js"
               />
               <SiSass
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Sass"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
@@ -386,37 +386,37 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiJquery
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="jQuery"
               />
               <SiWordpress
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="WordPress"
               />
               <SiPhp
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="PHP"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
@@ -479,27 +479,27 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
               <SiAdobeillustrator
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Illustrator"
               />
@@ -562,47 +562,47 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiSass
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Sass"
               />
               <SiJquery
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="jQuery"
               />
               <SiWordpress
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="WordPress"
               />
               <SiPhp
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="PHP"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
               <SiInvision
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="InVision"
               />
@@ -665,22 +665,22 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
@@ -743,27 +743,27 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiReact
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="React"
               />
               <SiTailwindcss
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Tailwind"
               />
@@ -837,32 +837,32 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiReact
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="React"
               />
               <SiSass
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Sass"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
@@ -936,42 +936,42 @@ const Slides = ({ PortfolioData }) => {
           <div className="flex w-full flex-row justify-center">
             <div className="flex flex-row group mt-12 gap-2 cursor-default">
               <SiHtml5
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="HTML5"
               />
               <SiCss3
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="CSS3"
               />
               <SiJavascript
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Javascript"
               />
               <SiSass
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Sass"
               />
               <SiJquery
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="jQuery"
               />
               <SiAdobephotoshop
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Photoshop"
               />
               <SiAdobeillustrator
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Illustrator"
               />
               <SiAbletonlive
-                className="transition-all cursor-help hover:!opacity-100 active:scale-95 active:!opacity-50 group-hover:opacity-30"
+                className="transition-all cursor-help hover:!opacity-100 opacity-30"
                 data-tooltip-id="tooltip"
                 data-tooltip-content="Ableton Live"
               />
