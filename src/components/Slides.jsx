@@ -34,7 +34,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           ) {
             videoSource.setAttribute(
               "src",
-              PortfolioData[prev.index].assets.video,
+              PortfolioData[prev.index].assets.video
             );
             video.load();
           }
@@ -44,7 +44,10 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
       onHidden={(splide, prev, next) => {
         prev.slide
           .querySelector(".chevron")
-          .classList.remove("animate-[bounce_1s_1_reverse_forwards]");
+          .classList.remove(
+            "animate-[bounce_1s_1_reverse_forwards]",
+            "animate-[bounce_1s_1s_1_reverse_forwards]"
+          );
         prev.slide.scrollTop = 0;
         prev.slide.querySelectorAll("video").forEach((video) => {
           video.currentTime = "0";
@@ -158,7 +161,9 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
               style={{
                 color: `${PortfolioData[0].colors.vibrant}`,
               }}
-              className={`chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl animate-[bounce_1s_1s_1_reverse_forwards] ${showPortfolio === false && "!animate-none"}`}
+              className={`chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl animate-[bounce_1s_1s_1_reverse_forwards] ${
+                showPortfolio === false ? "!animate-none" : ""
+              }`}
             />
           </div>
         </div>
