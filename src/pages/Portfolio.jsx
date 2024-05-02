@@ -75,7 +75,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       ref={refPortfolio}
       className={clsx(
         "transition-[filter, color, background] pointer-events-none absolute bottom-0 z-10 flex h-screen w-screen origin-bottom flex-row items-center justify-center overflow-hidden bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
-        { "pointer-events-auto blur-none": showPortfolio }
+        { "pointer-events-auto blur-none": showPortfolio },
       )}
     >
       <Profile
@@ -89,7 +89,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
       <div
         className={clsx(
           "pointer-events-none absolute flex-row bg-white text-black opacity-0 blur transition-[filter] duration-300 ease-in selection:bg-black selection:text-white dark:bg-black dark:text-white dark:selection:bg-white dark:selection:text-black",
-          { "pointer-events-auto blur-none": showPortfolio }
+          { "pointer-events-auto blur-none": showPortfolio },
         )}
         ref={refSplide}
       >
@@ -152,7 +152,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
             </div>
           </div>
         </header>
-        <Slides PortfolioData={PortfolioData} />
+        <Slides PortfolioData={PortfolioData} showPortfolio={showPortfolio} />
         <span
           id="gpu_accel_only"
           className="clippy fixed inset-0 h-full w-full border-[40px_0] border-white/70 bg-transparent backdrop-blur-lg backdrop-saturate-150 transition-all dark:border-black/70 sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw]"

@@ -19,10 +19,13 @@ import {
   SiAbletonlive,
 } from "react-icons/si";
 
-const Slides = ({ PortfolioData }) => {
+const Slides = ({ PortfolioData, showPortfolio }) => {
   return (
     <Splide
       onActive={(splide, prev, next) => {
+        prev.slide
+          .querySelector(".chevron")
+          .classList.add("animate-[bounce_1s_1_reverse_forwards]");
         prev.slide.querySelectorAll("video").forEach((video) => {
           let videoSource = video.querySelector("source");
           if (
@@ -31,7 +34,7 @@ const Slides = ({ PortfolioData }) => {
           ) {
             videoSource.setAttribute(
               "src",
-              PortfolioData[prev.index].assets.video
+              PortfolioData[prev.index].assets.video,
             );
             video.load();
           }
@@ -39,6 +42,9 @@ const Slides = ({ PortfolioData }) => {
         });
       }}
       onHidden={(splide, prev, next) => {
+        prev.slide
+          .querySelector(".chevron")
+          .classList.remove("animate-[bounce_1s_1_reverse_forwards]");
         prev.slide.scrollTop = 0;
         prev.slide.querySelectorAll("video").forEach((video) => {
           video.currentTime = "0";
@@ -152,7 +158,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[0].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className={`chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl animate-[bounce_1s_1s_1_reverse_forwards] ${showPortfolio === false && "!animate-none"}`}
             />
           </div>
         </div>
@@ -260,7 +266,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[1].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -348,7 +354,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[2].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -441,7 +447,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[3].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -524,7 +530,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[4].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -627,7 +633,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[5].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -705,7 +711,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[6].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -799,7 +805,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[7].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -898,7 +904,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[8].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
@@ -996,7 +1002,7 @@ const Slides = ({ PortfolioData }) => {
               style={{
                 color: `${PortfolioData[9].colors.vibrant}`,
               }}
-              className="pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
+              className="chevron -translate-y-1/4 pointer-events-none mt-6 block text-xl md:mt-8 md:text-3xl"
             />
           </div>
         </div>
