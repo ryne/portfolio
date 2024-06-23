@@ -1,10 +1,10 @@
 # Ryne / Portfolio
 
-When the pieces come together and stick, we must share them. My personal development/design portfolio.
+When the pieces come together and stick, we must share them. My personal development & design portfolio.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/80d02c9b-beed-4711-911a-779cf73d4972/deploy-status)](https://app.netlify.com/sites/rynenotryan/deploys)
 
-[![N|Solid](https://itsrynenotryan.com/ryne_not_ryan_portfolio.png)](https://itsrynenotryan.com/)
+[![N|Solid](https://rynenotryan.com/ryne_not_ryan_portfolio.png)](https://rynenotryan.com/)
 
 ## Scripts:
 
