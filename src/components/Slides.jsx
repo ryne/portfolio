@@ -34,7 +34,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           ) {
             videoSource.setAttribute(
               "src",
-              PortfolioData[prev.index].assets.video
+              PortfolioData[prev.index].assets.video,
             );
             video.load();
           }
@@ -46,7 +46,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           .querySelector(".chevron")
           .classList.remove(
             "animate-[bounce_1s_1_reverse_forwards]",
-            "animate-[bounce_1s_1s_1_reverse_forwards]"
+            "animate-[bounce_1s_1s_1_reverse_forwards]",
           );
         prev.slide.scrollTop = 0;
         prev.slide.querySelectorAll("video").forEach((video) => {
@@ -78,7 +78,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
     >
       <Tooltip
         id="tooltip"
-        className="z-[1000] !bg-black !text-white !opacity-90 dark:!bg-white dark:!text-black"
+        className="z-[1000] !bg-black !text-white !opacity-80 dark:!bg-white dark:!text-black !p-[2px_8px]"
       />
       <SplideSlide className="overflow-y-auto">
         <div
