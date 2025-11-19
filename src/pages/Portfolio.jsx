@@ -37,36 +37,6 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         duration: 0.55,
         ease: "power1",
       });
-      // Check if a GPU is being utilized for hardware acceleration. Apply optimizations if necessary.
-      setTimeout(function () {
-        let canvas = document.createElement("canvas");
-        let gl;
-        let debugInfo;
-        let vendor;
-
-        try {
-          gl =
-            canvas.getContext("webgl") ||
-            canvas.getContext("experimental-webgl");
-        } catch (e) {}
-
-        if (gl) {
-          debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
-          vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-          if (vendor === "Google Inc. (Google)") {
-            // Remove GPU-intensive elements.
-            setCpuOnly(true);
-            document.getElementById("gpu_accel_only").remove();
-            document
-              .querySelectorAll(".blur, .blur-none, .backdrop-blur")
-              .forEach(function (i) {
-                i.classList.remove("blur", "blur-none", "backdrop-blur");
-              });
-          } else {
-            document.getElementById("cpu_accel_only").remove();
-          }
-        }
-      }, 450);
     }
   }, [showPortfolio]);
 
@@ -93,7 +63,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
         )}
         ref={refSplide}
       >
-        <header className="absolute top-0 z-10 flex h-[40px] w-full content-center items-center justify-center sm:h-[50px] md:h-[5vw]">
+        <header className="absolute top-0 z-10 flex h-[50px] w-full content-center items-center justify-center md:max-w-[890px] bg-[#FFF6] dark:bg-[#0003] md:rounded-b-full backdrop-blur-xl left-[50%] translate-x-[-50%] sm:h-[60px] md:h-[5vw]">
           <div className="absolute left-[20px] flex w-[calc(50%_-_51px)] flex-row items-center justify-start sm:justify-end md:left-[5vw] md:w-[calc(50%_-_5vw_-_51px)] 2xl:w-[calc(50%_-_5vw_-_61px)]">
             <h1 className="text-xl font-light italic sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Ryne
@@ -153,14 +123,6 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
           </div>
         </header>
         <Slides PortfolioData={PortfolioData} showPortfolio={showPortfolio} />
-        <span
-          id="gpu_accel_only"
-          className="pointer-events-none clippy fixed inset-0 h-full w-full border-[40px_0] border-white/70 bg-transparent backdrop-blur-lg backdrop-saturate-150 transition-all dark:border-black/70 sm:border-[50px_0] md:border-[50px_5vw] lg:border-[5vw]"
-        ></span>
-        <span
-          id="cpu_accel_only"
-          className="pointer-events-none absolute top-0 z-0 h-full w-full shadow-[0_0_40px_#FFF_inset] dark:shadow-[0_0_40px_#000_inset] md:shadow-[0_0_5vw_#FFF_inset] md:dark:shadow-[0_0_5vw_#000_inset]"
-        ></span>
       </div>
     </section>
   );

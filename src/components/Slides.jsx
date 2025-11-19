@@ -72,7 +72,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           next: "transition-all z-10 hidden md:block z-50 cursor-pointer h-[40px] absolute right-[2.5vw] top-1/2 h-[40px] -mr-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert",
           pagination:
             "transition-all z-10 flex bottom-[8px] md:bottom-[calc(2.5vw_-_12px)] w-full justify-center items-center fixed",
-          page: "transition-all mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-150 ease-in transition-all bg-black dark:bg-white",
+          page: "transition-all mx-0.5 rounded-full w-2.5 h-2.5 scale-75 opacity-30 active:opacity-50 active:scale-150 ease-in transition-all bg-black shadow-[0_1px_2px_1px_#FFF3,0_0_0_1px_#FFF3] dark:shadow-[0_0_2px_1px_#0003,0_0_0_1px_#0003] dark:bg-white",
         },
       }}
     >
@@ -259,7 +259,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
             <a
-              href="https://www.growwithprevail.com/"
+              href="https://www.growwithprevail.com/law-firm-marketing/"
               title="Open Prevail Legal Marketing in a new window"
               target="_blank"
               className="block p-1.5 px-3 text-xs uppercase tracking-[.3em] opacity-50 transition-all hover:opacity-100 md:tracking-[.4em]"
