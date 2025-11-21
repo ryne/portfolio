@@ -8,7 +8,7 @@ import {
   FaXTwitter,
   FaUserAstronaut,
 } from "react-icons/fa6";
-import light from "../assets/light.png";
+import light from "../assets/light.svg";
 import Profile from "../components/Profile";
 import Slides from "../components/Slides";
 
@@ -82,7 +82,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
               <img
                 src={light}
                 alt="Theme Toggle"
-                className="h-[32px] min-h-[25.5px] sm:h-[36px] md:h-[4vw] xl:h-[51px]"
+                className="h-[32px] min-h-[25.5px] sm:h-[36px] md:h-[4vw] xl:h-[61px]"
               />
             </button>
           </div>
@@ -123,6 +123,7 @@ function Portfolio({ toggleTheme, showPortfolio, PortfolioData }) {
           </div>
         </header>
         <Slides PortfolioData={PortfolioData} showPortfolio={showPortfolio} />
+        <div className="fixed z-0 w-full md:w-[180px] left-1/2 -translate-x-1/2 md:translate-y-1/2 h-[40px] bottom-[0] md:rounded-2xl backdrop-blur-xl md:h-[1.5vw] md:bottom-[2.5vw] before:md:rounded-2xl before:z-0 before:absolute before:inset-0 before:bg-gradient-to-b before:from-[rgb(255_255_255/_20%)] before:to-[rgb(255_255_255/_40%)] dark:before:from-[rgb(0_0_0/_20%)] dark:before:to-[rgb(0_0_0/_40%)]"></div>
       </div>
     </section>
   );

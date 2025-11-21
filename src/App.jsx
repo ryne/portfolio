@@ -5,7 +5,7 @@ import Hero from "./pages/Hero";
 import Portfolio from "./pages/Portfolio";
 import PortfolioData from "./data/PortfolioData";
 import { ImSpinner9 } from "react-icons/im";
-import light from "./assets/light.png";
+import light from "./assets/light.svg";
 
 const App = () => {
   const getCurrentTheme = () => {

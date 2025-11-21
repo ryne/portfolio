@@ -64,8 +64,10 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
         pagination: true,
         keyboard: "focused",
         keyboardPagination: true,
-        flickPower: 1,
+        flickPower: 50,
         flickMaxPages: 1,
+        perPage: 1,
+        perMove: 1,
         waitForTransition: true,
         classes: {
           prev: "transition-all z-10 rotate-180 hidden md:block z-50 cursor-pointer h-[40px] absolute left-[2.5vw] top-1/2 h-[40px] -ml-[20px] -translate-y-2/4 scale-[.62] xl:scale-75 active:opacity-50 active:scale-[.67] xl:active:scale-[.8] ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:text-white dark:invert",

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import clsx from "clsx";
-import light from "../assets/light.png";
+import light from "../assets/light.svg";
 import { BsFillFileRichtextFill, BsChevronDown } from "react-icons/bs";
 
 function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
@@ -55,17 +55,17 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
         "opacity-0 placeholder absolute flex h-screen w-screen justify-center items-center bg-white text-black flex-col selection:bg-black selection:text-white dark:text-white dark:bg-black dark:selection:bg-white dark:selection:text-black transition-[filter, color, background] duration-300 ease-in",
         {
           "pointer-events-none blur": showPortfolio,
-        }
+        },
       )}
       ref={refBase}
     >
       <div className="absolute top-50 mb-8 md:mb-16 z-10" ref={refLight}>
         <div
           style={{ height: "100vh" }}
-          className="placeholder absolute -translate-y-full translate-x-4 opacity-10 bg-black w-[1px] h-screen dark:bg-white"
+          className="placeholder absolute -translate-y-full left-1/2 opacity-10 bg-black w-[1px] h-screen dark:bg-white"
         ></div>
         <button
-          className="cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
+          className="w-[41px] cursor-pointer active:opacity-50 active:scale-95 ease-in transition-opacity selection:bg-transparent dark:selection:bg-transparent dark:invert"
           onClick={() => toggleTheme()}
         >
           <img src={light} alt="Theme Toggle" />
@@ -105,7 +105,7 @@ function Hero({ toggleTheme, showPortfolio, togglePortfolio }) {
           <BsChevronDown
             className={clsx(
               "group-hover:opacity-100 absolute text-lg -bottom-9 pointer-events-none opacity-20 transition-all",
-              { "animate-bounce": !showPortfolio }
+              { "animate-bounce": !showPortfolio },
             )}
           />
         </button>
