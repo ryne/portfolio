@@ -261,7 +261,7 @@ const Slides = ({ PortfolioData, showPortfolio }) => {
           </div>
           <div className="mt-1.5 flex w-full flex-col items-center justify-center md:mt-2">
             <a
-              href="https://www.growwithprevail.com/law-firm-marketing/"
+              href="https://www.growwithprevail.com/"
               title="Open Prevail Legal Marketing in a new window"
               target="_blank"
               className="block p-1.5 px-3 text-xs uppercase tracking-[.3em] opacity-50 transition-all hover:opacity-100 md:tracking-[.4em]"
